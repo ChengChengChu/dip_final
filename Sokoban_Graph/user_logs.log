@@ -1,0 +1,51 @@
+python -m graphrag.prompt_tune
+
+
+INFO: Reading settings from settings.yaml
+
+Loading Input (InputFileType.text).
+INFO: Generating domain...
+
+INFO: Generated domain: "Artificial Intelligence / Game Theory"
+
+INFO: Detecting language...
+
+INFO: Detected language: The primary language of the provided text is "English".
+
+INFO: Generating persona...
+
+INFO: Generated persona: You are an expert in community analysis and network theory. You are skilled at mapping relationships and structures within complex system
+s, particularly in the context of interdisciplinary fields. You are adept at helping people identify and understand the dynamics and interactions within the "Artificial Intelligence / Game Theory" community, facilitating collaboration and knowledge sharing among stakeholders.                                                
+INFO: Generating community report ranking description...
+
+INFO: Generated community report ranking description: A float score between 0-10 that represents the relevance of the text to artificial intelligence, game theory
+, and problem-solving strategies, with 1 being trivial or irrelevant and 10 being highly significant, impactful, and essential for understanding the dynamics of game mechanics and AI interactions within the context of the Sokoban game framework.                                                                               
+INFO: Generating entity types
+
+INFO: Generated entity types: ['action', 'object', 'location', 'predicate', 'goal', 'domain', 'problem']
+
+INFO: Generating entity relationship examples...
+
+INFO: Done generating entity relationship examples
+
+INFO: Generating entity extraction prompt...
+Failed to get encoding for cl100k_base when getting num_tokens_from_string. Fall back to default encoding cl100k_base
+Failed to get encoding for cl100k_base when getting num_tokens_from_string. Fall back to default encoding cl100k_base
+Failed to get encoding for cl100k_base when getting num_tokens_from_string. Fall back to default encoding cl100k_base
+Failed to get encoding for cl100k_base when getting num_tokens_from_string. Fall back to default encoding cl100k_base
+Failed to get encoding for cl100k_base when getting num_tokens_from_string. Fall back to default encoding cl100k_base
+
+INFO: Generated entity extraction prompt, stored in folder prompts
+
+INFO: Generating entity summarization prompt...
+
+INFO: Generated entity summarization prompt, stored in folder prompts
+
+INFO: Generating community reporter role...
+
+INFO: Generated community reporter role: A community analyst specializing in the "Artificial Intelligence / Game Theory" domain, tasked with mapping the relations
+hips and interactions within the community. This role will involve analyzing the dynamics of various stakeholders, including researchers, practitioners, and organizations, to identify key players, emerging trends, and collaborative opportunities. The analyst will produce reports that inform decision-makers about significant developments in the community, their implications for research and practice, and potential avenues for collaboration and knowledge sharing. The insights generated will support strategic initiatives and foster a more interconnected and innovative environment within the field.                                               
+INFO: Generating community summarization prompt...
+
+INFO: Generated community summarization prompt, stored in folder prompts
+-----------------------------------------------------------------------------------------------------------------------
