@@ -1,0 +1,568 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d6" for="edge" attr.name="source_id" attr.type="string" />
+  <key id="d5" for="edge" attr.name="description" attr.type="string" />
+  <key id="d4" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d3" for="node" attr.name="entity_type" attr.type="string" />
+  <key id="d2" for="node" attr.name="source_id" attr.type="string" />
+  <key id="d1" for="node" attr.name="description" attr.type="string" />
+  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="SOKOBAN">
+      <data key="d0">OBJECT</data>
+      <data key="d1">The sokoban is an object that represents the player or character in the game, responsible for pushing crates and moving around the game environment.
+The sokoban is an object that represents the player or character in the game, responsible for pushing crates.</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f,5211048d327058bc6a44c679ae895263</data>
+    </node>
+    <node id="CRATE">
+      <data key="d0">OBJECT</data>
+      <data key="d1">The crate is an object that the sokoban can push around the game environment, requiring specific conditions to be moved.
+The crate is an object that the sokoban can push around the game environment.</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f,5211048d327058bc6a44c679ae895263</data>
+    </node>
+    <node id="LOCATION X">
+      <data key="d0">LOCATION</data>
+      <data key="d1">Location x is a position in the game where the sokoban or crate can be located, serving as a reference point for movement.</data>
+      <data key="d2">5211048d327058bc6a44c679ae895263</data>
+    </node>
+    <node id="LOCATION Y">
+      <data key="d0">LOCATION</data>
+      <data key="d1">Location y is a position in the game where the sokoban or crate can be located, often used in relation to other locations.</data>
+      <data key="d2">5211048d327058bc6a44c679ae895263</data>
+    </node>
+    <node id="LOCATION Z">
+      <data key="d0">LOCATION</data>
+      <data key="d1">Location z is a target position in the game where the crate can be pushed to, indicating a spatial manipulation.</data>
+      <data key="d2">5211048d327058bc6a44c679ae895263</data>
+    </node>
+    <node id="MOVELEFT">
+      <data key="d0">ACTION</data>
+      <data key="d1">The action 'moveLeft' allows the sokoban to move from one location to another, specifically to a location that is to the left of its current position, given certain conditions are met.</data>
+      <data key="d2">5211048d327058bc6a44c679ae895263</data>
+    </node>
+    <node id="MOVERIGHT">
+      <data key="d0">ACTION</data>
+      <data key="d1">The action 'moveRight' allows the sokoban to move from one location to another, specifically to a location that is to the right of its current position, contingent on specific preconditions.</data>
+      <data key="d2">5211048d327058bc6a44c679ae895263</data>
+    </node>
+    <node id="MOVEUP">
+      <data key="d0">ACTION</data>
+      <data key="d1">The action 'moveUp' allows the sokoban to move from one location to another, specifically from a lower location to a higher one, given certain conditions are met.</data>
+      <data key="d2">5211048d327058bc6a44c679ae895263</data>
+    </node>
+    <node id="MOVEDOWN">
+      <data key="d0">ACTION</data>
+      <data key="d1">The action 'moveDown' allows the sokoban to move from a higher location to a lower one, contingent on specific preconditions.</data>
+      <data key="d2">5211048d327058bc6a44c679ae895263</data>
+    </node>
+    <node id="PUSHLEFT">
+      <data key="d0">ACTION</data>
+      <data key="d1">The action of moving a crate to the left towards location z, indicating a spatial manipulation in a game environment.</data>
+      <data key="d2">5211048d327058bc6a44c679ae895263</data>
+    </node>
+    <node id="PUSHRIGHT">
+      <data key="d0">ACTION</data>
+      <data key="d1">The action of moving a crate to the right towards location z, indicating a spatial manipulation in a game environment.</data>
+      <data key="d2">5211048d327058bc6a44c679ae895263</data>
+    </node>
+    <node id="BELOW">
+      <data key="d0">PREDICATE</data>
+      <data key="d1">The predicate 'below' indicates a spatial relationship where one location is positioned below another location, which is essential for determining vertical movement directions in the game.</data>
+      <data key="d2">5211048d327058bc6a44c679ae895263</data>
+    </node>
+    <node id="AT">
+      <data key="d0">PREDICATE</data>
+      <data key="d1">The predicate 'at' indicates the relationship between an object and its current location, specifying where the sokoban or crate is positioned in the game environment.</data>
+      <data key="d2">5211048d327058bc6a44c679ae895263</data>
+    </node>
+    <node id="CLEAR">
+      <data key="d0">PREDICATE</data>
+      <data key="d1">The predicate 'clear' indicates whether a location is unoccupied and available for movement or pushing actions, which is crucial for the sokoban's actions.</data>
+      <data key="d2">5211048d327058bc6a44c679ae895263</data>
+    </node>
+    <node id="LEFTOF">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">5211048d327058bc6a44c679ae895263</data>
+    </node>
+    <node id="PUSHUP">
+      <data key="d0">ACTION</data>
+      <data key="d1">The action of moving a crate upwards to a higher location, indicating a spatial manipulation in a game environment.</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f</data>
+    </node>
+    <node id="PUSHDOWN">
+      <data key="d0">ACTION</data>
+      <data key="d1">The action of moving a crate downwards to a lower location, indicating a spatial manipulation in a game environment.</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f</data>
+    </node>
+    <node id="X">
+      <data key="d0">LOCATION</data>
+      <data key="d1">Location x is a position in the game where the sokoban is initially located before pushing the crate.</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f</data>
+    </node>
+    <node id="Y">
+      <data key="d0">LOCATION</data>
+      <data key="d1">Location y is a position in the game where the crate is initially located before being pushed.</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f</data>
+    </node>
+    <node id="Z">
+      <data key="d0">LOCATION</data>
+      <data key="d1">Location z is a target position where the crate is to be pushed.</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f</data>
+    </node>
+    <node id="L1">
+      <data key="d0">LOCATION</data>
+      <data key="d1">Location l1 is a defined point in the game environment, used for establishing spatial relationships.
+</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f,7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </node>
+    <node id="L2">
+      <data key="d0">LOCATION</data>
+      <data key="d1">Location l2 is a defined point in the game environment, used for establishing spatial relationships.
+Location l2 is a target position in the game where crate2 needs to be moved to as part of the goal.</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f,7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </node>
+    <node id="L5">
+      <data key="d0">LOCATION</data>
+      <data key="d1">Location l5 is a defined point in the game environment, used for establishing spatial relationships.
+Location l5 is a specific position in the game that is clear and available for movement.</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f,7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </node>
+    <node id="L6">
+      <data key="d0">LOCATION</data>
+      <data key="d1">Location l6 is a defined point in the game environment, used for establishing spatial relationships.
+Location l6 is a specific position in the game that is clear and available for movement.</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f,7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </node>
+    <node id="L9">
+      <data key="d0">LOCATION</data>
+      <data key="d1">Location l9 is a defined point in the game environment, used for establishing spatial relationships.
+Location l9 is a specific position in the game where crate1 is currently located.</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f,7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </node>
+    <node id="L10">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">47429b83e588f06c43d4cc792a75379f</data>
+    </node>
+    <node id="L13">
+      <data key="d0" />
+      <data key="d1">Location l13 is a defined point in the game environment, used for establishing spatial relationships.
+Location l13 is a specific position in the game that is clear and available for movement.</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f,7e7d1504bd08a8b76fdc1586682a1c4b</data>
+      <data key="d3">LOCATION</data>
+    </node>
+    <node id="L14">
+      <data key="d0" />
+      <data key="d1">Location l14 is a defined point in the game environment, used for establishing spatial relationships.
+Location l14 is a specific position in the game that is clear and available for movement.</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f,7e7d1504bd08a8b76fdc1586682a1c4b</data>
+      <data key="d3">LOCATION</data>
+    </node>
+    <node id="L15">
+      <data key="d0" />
+      <data key="d1">Location l15 is a defined point in the game environment, used for establishing spatial relationships.
+Location l15 is a specific position in the game where crate2 is currently located.</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f,7e7d1504bd08a8b76fdc1586682a1c4b</data>
+      <data key="d3">LOCATION</data>
+    </node>
+    <node id="L11">
+      <data key="d0" />
+      <data key="d1">Location l11 is a defined point in the game environment, used for establishing spatial relationships.
+Location l11 is a specific position in the game that is clear and available for movement.</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f,7e7d1504bd08a8b76fdc1586682a1c4b</data>
+      <data key="d3">LOCATION</data>
+    </node>
+    <node id="L16">
+      <data key="d0" />
+      <data key="d1">Location l16 is a defined point in the game environment, used for establishing spatial relationships.</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f</data>
+      <data key="d3">LOCATION</data>
+    </node>
+    <node id="L12">
+      <data key="d0" />
+      <data key="d1">Location l12 is a defined point in the game environment, used for establishing spatial relationships.
+Location l12 is a specific position in the game that is clear and available for movement.</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f,7e7d1504bd08a8b76fdc1586682a1c4b</data>
+      <data key="d3">LOCATION</data>
+    </node>
+    <node id="L17">
+      <data key="d0" />
+      <data key="d1">Location l17 is a defined point in the game environment, used for establishing spatial relationships.
+Location l17 is a specific position in the game that is clear and available for movement.</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f,7e7d1504bd08a8b76fdc1586682a1c4b</data>
+      <data key="d3">LOCATION</data>
+    </node>
+    <node id="L18">
+      <data key="d0" />
+      <data key="d1">Location l18 is a defined point in the game environment, used for establishing spatial relationships.
+Location l18 is a specific position in the game that is clear and available for movement.</data>
+      <data key="d2">47429b83e588f06c43d4cc792a75379f,7e7d1504bd08a8b76fdc1586682a1c4b</data>
+      <data key="d3">LOCATION</data>
+    </node>
+    <node id="SOKOBAN2">
+      <data key="d0">OBJECT</data>
+      <data key="d1">The sokoban2 is an object representing the player or character in the game, responsible for pushing crates and navigating the environment.</data>
+      <data key="d2">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </node>
+    <node id="CRATE1">
+      <data key="d0">OBJECT</data>
+      <data key="d1">The crate1 is an object that can be pushed by the sokoban2 within the game environment, initially located at position l9.</data>
+      <data key="d2">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </node>
+    <node id="CRATE2">
+      <data key="d0">OBJECT</data>
+      <data key="d1">The crate2 is another object that can be pushed by the sokoban2, initially located at position l15.</data>
+      <data key="d2">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </node>
+    <node id="CLEAR SPACES">
+      <data key="d0">PREDICATE</data>
+      <data key="d1">Clear spaces are locations in the game environment that are unoccupied and available for movement, such as l1, l2, l5, l6, l11, l12, l13, l14, l17, and l18.</data>
+      <data key="d2">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </node>
+    <node id="GOAL">
+      <data key="d0">GOAL</data>
+      <data key="d1">The goal is a specific condition that must be achieved in the game, which in this case is having crate1 at location l9 and crate2 at location l2.</data>
+      <data key="d2">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </node>
+    <edge source="SOKOBAN" target="CRATE">
+      <data key="d4">1.0</data>
+      <data key="d5">The sokoban is the character that interacts with and pushes the crate in the game environment.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="SOKOBAN" target="MOVELEFT">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'moveLeft' involves the sokoban as the object being moved to a new location to the left.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="SOKOBAN" target="MOVERIGHT">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'moveRight' involves the sokoban as the object being moved to a new location to the right.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="SOKOBAN" target="MOVEUP">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'moveUp' involves the sokoban as the object being moved to a new location above its current position.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="SOKOBAN" target="MOVEDOWN">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'moveDown' involves the sokoban as the object being moved to a new location below its current position.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="SOKOBAN" target="PUSHLEFT">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'pushLeft' involves the sokoban as the character pushing the crate to the left towards location z.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="SOKOBAN" target="PUSHRIGHT">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'pushRight' involves the sokoban as the character pushing the crate to the right towards location z.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="SOKOBAN" target="PUSHUP">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'pushUp' involves the sokoban as the character that pushes the crate to a new location.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="SOKOBAN" target="PUSHDOWN">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'pushDown' involves the sokoban as the character that pushes the crate to a new location.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="CRATE" target="PUSHLEFT">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'pushLeft' directly involves the crate being moved to location z, indicating a direct action towards that location.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="CRATE" target="PUSHRIGHT">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'pushRight' directly involves the crate being moved to location z, indicating a direct action towards that location.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="CRATE" target="PUSHUP">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'pushUp' directly involves the crate being moved to a higher location.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="CRATE" target="PUSHDOWN">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'pushDown' directly involves the crate being moved to a lower location.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="LOCATION X" target="LOCATION Y">
+      <data key="d4">1.0</data>
+      <data key="d5">Location x is positioned to the left of location y, establishing a spatial relationship between the two locations.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="LOCATION X" target="LOCATION Z">
+      <data key="d4">1.0</data>
+      <data key="d5">Location x is positioned to the left of location z, establishing a spatial relationship between the two locations.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="LOCATION Y" target="LOCATION Z">
+      <data key="d4">1.0</data>
+      <data key="d5">Location y is positioned to the left of location z, establishing a spatial relationship between the two locations.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="LOCATION Y" target="MOVELEFT">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'moveLeft' requires location y to be clear and to the left of location x for the sokoban to move successfully.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="LOCATION Y" target="MOVERIGHT">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'moveRight' requires location y to be clear and to the right of location x for the sokoban to move successfully.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="LOCATION Y" target="MOVEUP">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'moveUp' requires location y to be clear and above location x for the sokoban to move successfully.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="LOCATION Y" target="MOVEDOWN">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'moveDown' requires location y to be clear and below location x for the sokoban to move successfully.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="LOCATION Z" target="PUSHLEFT">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'pushLeft' requires location z to be clear for the crate to be pushed successfully.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="LOCATION Z" target="PUSHRIGHT">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'pushRight' requires location z to be clear for the crate to be pushed successfully.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="MOVELEFT" target="LEFTOF">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'moveLeft' requires the predicate 'leftOf' to establish the spatial relationship necessary for the sokoban to move successfully to the left.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="MOVERIGHT" target="LEFTOF">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'moveRight' requires the predicate 'leftOf' to establish the spatial relationship necessary for the sokoban to move successfully to the right.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="MOVEUP" target="BELOW">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'moveUp' requires the predicate 'below' to establish the spatial relationship necessary for the sokoban to move successfully upwards.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="MOVEDOWN" target="BELOW">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'moveDown' requires the predicate 'below' to establish the spatial relationship necessary for the sokoban to move successfully downwards.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="PUSHLEFT" target="AT">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'pushLeft' requires the predicate 'at' to confirm the current position of the sokoban and the crate before executing the push action.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="PUSHLEFT" target="CLEAR">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'pushLeft' requires the predicate 'clear' to ensure that the destination location z is unoccupied before pushing the crate.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="PUSHRIGHT" target="AT">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'pushRight' requires the predicate 'at' to confirm the current position of the sokoban and the crate before executing the push action.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="PUSHRIGHT" target="CLEAR">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'pushRight' requires the predicate 'clear' to ensure that the destination location z is unoccupied before pushing the crate.</data>
+      <data key="d6">5211048d327058bc6a44c679ae895263</data>
+    </edge>
+    <edge source="PUSHUP" target="Y">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'pushUp' requires the sokoban to be at location y before pushing the crate upwards.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="PUSHUP" target="Z">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'pushUp' results in the crate being moved to location z, indicating a direct action towards that location.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="PUSHDOWN" target="Y">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'pushDown' requires the sokoban to be at location y before pushing the crate downwards.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="PUSHDOWN" target="Z">
+      <data key="d4">1.0</data>
+      <data key="d5">The action 'pushDown' results in the crate being moved to location z, indicating a direct action towards that location.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="X" target="Y">
+      <data key="d4">1.0</data>
+      <data key="d5">Location x is positioned below location y, establishing a spatial relationship between the two locations.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="Y" target="Z">
+      <data key="d4">1.0</data>
+      <data key="d5">Location y is positioned below location z, establishing a spatial relationship between the two locations.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="L1" target="L5">
+      <data key="d4">1.0</data>
+      <data key="d5">Location l5 is positioned below location l1, establishing a vertical spatial relationship between the two locations.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="L1" target="SOKOBAN2">
+      <data key="d4">1.0</data>
+      <data key="d5">The sokoban2 can potentially move to location l1, which is clear and available for movement.</data>
+      <data key="d6">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </edge>
+    <edge source="L2" target="L6">
+      <data key="d4">1.0</data>
+      <data key="d5">Location l6 is positioned below location l2, establishing a vertical spatial relationship between the two locations.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="L2" target="CRATE2">
+      <data key="d4">1.0</data>
+      <data key="d5">Crate2 needs to be moved to location l2 as part of the goal, indicating a direct action towards that location.</data>
+      <data key="d6">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </edge>
+    <edge source="L5" target="L9">
+      <data key="d4">1.0</data>
+      <data key="d5">Location l9 is positioned below location l5, establishing a vertical spatial relationship between the two locations.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="L5" target="SOKOBAN2">
+      <data key="d4">1.0</data>
+      <data key="d5">The sokoban2 can potentially move to location l5, which is clear and available for movement.</data>
+      <data key="d6">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </edge>
+    <edge source="L6" target="L10">
+      <data key="d4">1.0</data>
+      <data key="d5">Location l10 is positioned below location l6, establishing a vertical spatial relationship between the two locations.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="L6" target="SOKOBAN2">
+      <data key="d4">1.0</data>
+      <data key="d5">The sokoban2 can potentially move to location l6, which is clear and available for movement.</data>
+      <data key="d6">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </edge>
+    <edge source="L9" target="L13">
+      <data key="d4">1.0</data>
+      <data key="d5">Location l13 is positioned below location l9, establishing a vertical spatial relationship between the two locations.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="L9" target="CRATE1">
+      <data key="d4">1.0</data>
+      <data key="d5">Crate1 is currently located at position l9, establishing its spatial relationship with that location.</data>
+      <data key="d6">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </edge>
+    <edge source="L10" target="L14">
+      <data key="d4">1.0</data>
+      <data key="d5">Location l14 is positioned below location l10, establishing a vertical spatial relationship between the two locations.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="L10" target="L11">
+      <data key="d4">1.0</data>
+      <data key="d5">Location l10 is positioned to the left of location l11, establishing a horizontal spatial relationship between the two locations.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="L13" target="L17">
+      <data key="d4">1.0</data>
+      <data key="d5">Location l17 is positioned below location l13, establishing a vertical spatial relationship between the two locations.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="L13" target="L14">
+      <data key="d4">1.0</data>
+      <data key="d5">Location l13 is positioned to the left of location l14, establishing a horizontal spatial relationship between the two locations.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="L13" target="SOKOBAN2">
+      <data key="d4">1.0</data>
+      <data key="d5">The sokoban2 can potentially move to location l13, which is clear and available for movement.</data>
+      <data key="d6">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </edge>
+    <edge source="L14" target="L18">
+      <data key="d4">1.0</data>
+      <data key="d5">Location l18 is positioned below location l14, establishing a vertical spatial relationship between the two locations.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="L14" target="L15">
+      <data key="d4">1.0</data>
+      <data key="d5">Location l14 is positioned to the left of location l15, establishing a horizontal spatial relationship between the two locations.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="L14" target="SOKOBAN2">
+      <data key="d4">1.0</data>
+      <data key="d5">The sokoban2 can potentially move to location l14, which is clear and available for movement.</data>
+      <data key="d6">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </edge>
+    <edge source="L15" target="L11">
+      <data key="d4">1.0</data>
+      <data key="d5">Location l15 is positioned below location l11, establishing a vertical spatial relationship between the two locations.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="L15" target="L16">
+      <data key="d4">1.0</data>
+      <data key="d5">Location l15 is positioned to the left of location l16, establishing a horizontal spatial relationship between the two locations.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="L15" target="CRATE2">
+      <data key="d4">1.0</data>
+      <data key="d5">Crate2 is currently located at position l15, establishing its spatial relationship with that location.</data>
+      <data key="d6">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </edge>
+    <edge source="L11" target="L12">
+      <data key="d4">1.0</data>
+      <data key="d5">Location l11 is positioned to the left of location l12, establishing a horizontal spatial relationship between the two locations.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="L11" target="SOKOBAN2">
+      <data key="d4">1.0</data>
+      <data key="d5">The sokoban2 can potentially move to location l11, which is clear and available for movement.</data>
+      <data key="d6">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </edge>
+    <edge source="L16" target="L12">
+      <data key="d4">1.0</data>
+      <data key="d5">Location l16 is positioned below location l12, establishing a vertical spatial relationship between the two locations.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="L12" target="SOKOBAN2">
+      <data key="d4">1.0</data>
+      <data key="d5">The sokoban2 can potentially move to location l12, which is clear and available for movement.</data>
+      <data key="d6">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </edge>
+    <edge source="L17" target="L18">
+      <data key="d4">1.0</data>
+      <data key="d5">Location l17 is positioned to the left of location l18, establishing a horizontal spatial relationship between the two locations.</data>
+      <data key="d6">47429b83e588f06c43d4cc792a75379f</data>
+    </edge>
+    <edge source="L17" target="SOKOBAN2">
+      <data key="d4">1.0</data>
+      <data key="d5">The sokoban2 can potentially move to location l17, which is clear and available for movement.</data>
+      <data key="d6">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </edge>
+    <edge source="L18" target="SOKOBAN2">
+      <data key="d4">1.0</data>
+      <data key="d5">The sokoban2 can potentially move to location l18, which is clear and available for movement.</data>
+      <data key="d6">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </edge>
+    <edge source="SOKOBAN2" target="CRATE1">
+      <data key="d4">1.0</data>
+      <data key="d5">The sokoban2 is the character that interacts with and can push crate1 in the game environment.</data>
+      <data key="d6">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </edge>
+    <edge source="SOKOBAN2" target="CRATE2">
+      <data key="d4">1.0</data>
+      <data key="d5">The sokoban2 is the character that interacts with and can push crate2 in the game environment.</data>
+      <data key="d6">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </edge>
+    <edge source="CRATE1" target="GOAL">
+      <data key="d4">1.0</data>
+      <data key="d5">The goal includes the condition that crate1 must be at location l9, linking the goal to the crate's position.</data>
+      <data key="d6">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </edge>
+    <edge source="CRATE2" target="GOAL">
+      <data key="d4">1.0</data>
+      <data key="d5">The goal includes the condition that crate2 must be at location l2, linking the goal to the crate's position.</data>
+      <data key="d6">7e7d1504bd08a8b76fdc1586682a1c4b</data>
+    </edge>
+  </graph>
+</graphml>
