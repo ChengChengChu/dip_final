@@ -1,0 +1,209 @@
+SearchResult(response="To implement a simple strategy for solving Sokoban problems without using search, we can create a function that generates a plan based on the initial state and the goal state. The function will analyze the positions of the sokoban and crates, and determine the necessary actions to achieve the goal.\n\nHere’s a Python function that follows this strategy:\n\n```python\ndef get_plan(objects, init, goal):\n    plan = []\n    \n    # Extract positions of sokoban and crates from the init state\n    sokoban = next(obj for obj in objects if obj.startswith('sokoban'))\n    crate_positions = {obj: None for obj in objects if obj.startswith('crate')}\n    \n    for atom in init:\n        if atom[0] == 'at':\n            if atom[1] == sokoban:\n                sokoban_position = atom[2]\n            elif atom[1] in crate_positions:\n                crate_positions[atom[1]] = atom[2]\n    \n    # Define a function to check if a location is clear\n    def is_clear(location):\n        return ('clear', location) in init\n    \n    # Define a function to move the sokoban\n    def move_sokoban(new_position):\n        plan.append(f'(move {sokoban} {sokoban_position} {new_position})')\n        nonlocal sokoban_position\n        sokoban_position = new_position\n    \n    # Define a function to push a crate\n    def push_crate(crate, new_position):\n        crate_position = crate_positions[crate]\n        plan.append(f'(push {sokoban} {sokoban_position} {crate_position} {new_position})')\n        crate_positions[crate] = new_position\n    \n    # Process the goal\n    for atom in goal:\n        if atom[0] == 'at':\n            crate = atom[1]\n            target_position = atom[2]\n            current_position = crate_positions[crate]\n            \n            # Move sokoban to the crate's position if not already there\n            if sokoban_position != current_position:\n                if is_clear(current_position):\n                    move_sokoban(current_position)\n            \n            # Check if the target position is clear and push the crate\n            if is_clear(target_position):\n                push_crate(crate, target_position)\n    \n    return plan\n```\n\n### Explanation of the Code:\n\n1. **Initialization**: The function starts by extracting the sokoban and crate positions from the initial state. It also initializes a plan list to store the actions.\n\n2. **Helper Functions**:\n   - `is_clear(location)`: Checks if a location is clear based on the initial state.\n   - `move_sokoban(new_position)`: Appends a move action to the plan and updates the sokoban's position.\n   - `push_crate(crate, new_position)`: Appends a push action to the plan and updates the crate's position.\n\n3. **Processing the Goal**: The function iterates through the goal conditions. For each crate that needs to be moved:\n   - It checks if the sokoban is at the crate's position and moves it if necessary.\n   - It checks if the target position is clear and pushes the crate to that position.\n\n4. **Return the Plan**: Finally, the function returns the list of actions that constitute the plan to achieve the goal.\n\nThis function provides a straightforward way to generate a plan for solving Sokoban problems based on the initial and goal states without requiring complex search algorithms.", context_data={'reports':   id                                         title  \
+0  2  Sokoban Game Dynamics: Actions and Locations   
+1  2  Sokoban Game Dynamics: Actions and Locations   
+
+                                             content  
+0  # Sokoban Game Dynamics: Actions and Locations...  
+1  # Sokoban Game Dynamics: Actions and Locations...  , 'relationships':     id      source      target  \
+0   65    SOKOBAN2      CRATE2   
+1    0     SOKOBAN       CRATE   
+2    5     SOKOBAN    PUSHLEFT   
+3    6     SOKOBAN   PUSHRIGHT   
+4   64    SOKOBAN2      CRATE1   
+5    7     SOKOBAN      PUSHUP   
+6    1     SOKOBAN    MOVELEFT   
+7    2     SOKOBAN   MOVERIGHT   
+8    3     SOKOBAN      MOVEUP   
+9    4     SOKOBAN    MOVEDOWN   
+10   9       CRATE    PUSHLEFT   
+11  10       CRATE   PUSHRIGHT   
+12  15  LOCATION Y  LOCATION Z   
+13  11       CRATE      PUSHUP   
+14  16  LOCATION Y    MOVELEFT   
+15  17  LOCATION Y   MOVERIGHT   
+16  18  LOCATION Y      MOVEUP   
+17  19  LOCATION Y    MOVEDOWN   
+18  20  LOCATION Z    PUSHLEFT   
+19  21  LOCATION Z   PUSHRIGHT   
+20  13  LOCATION X  LOCATION Y   
+21  26    PUSHLEFT          AT   
+22  27    PUSHLEFT       CLEAR   
+23  28   PUSHRIGHT          AT   
+24  29   PUSHRIGHT       CLEAR   
+25  14  LOCATION X  LOCATION Z   
+26  45          L9      CRATE1   
+27  67      CRATE2        GOAL   
+28  66      CRATE1        GOAL   
+29  50         L13    SOKOBAN2   
+30  41          L5    SOKOBAN2   
+31   8     SOKOBAN    PUSHDOWN   
+32  12       CRATE    PUSHDOWN   
+33  30      PUSHUP           Y   
+34  44          L9         L13   
+35  40          L5          L9   
+36  22    MOVELEFT      LEFTOF   
+37  23   MOVERIGHT      LEFTOF   
+38  24      MOVEUP       BELOW   
+39  25    MOVEDOWN       BELOW   
+40  34           X           Y   
+41  53         L14    SOKOBAN2   
+42  58         L11    SOKOBAN2   
+43  43          L6    SOKOBAN2   
+44  60         L12    SOKOBAN2   
+45  62         L17    SOKOBAN2   
+46  63         L18    SOKOBAN2   
+47  37          L1    SOKOBAN2   
+48  56         L15      CRATE2   
+49  31      PUSHUP           Z   
+50  39          L2      CRATE2   
+
+                                          description weight rank links  \
+0   The sokoban2 is the character that interacts w...    1.0   15     2   
+1   The sokoban is the character that interacts wi...    1.0   14     1   
+2   The action 'pushLeft' involves the sokoban as ...    1.0   14     4   
+3   The action 'pushRight' involves the sokoban as...    1.0   14     4   
+4   The sokoban2 is the character that interacts w...    1.0   14     1   
+5   The action 'pushUp' involves the sokoban as th...    1.0   13     2   
+6   The action 'moveLeft' involves the sokoban as ...    1.0   12     1   
+7   The action 'moveRight' involves the sokoban as...    1.0   12     1   
+8   The action 'moveUp' involves the sokoban as th...    1.0   12     1   
+9   The action 'moveDown' involves the sokoban as ...    1.0   12     1   
+10  The action 'pushLeft' directly involves the cr...    1.0   10     4   
+11  The action 'pushRight' directly involves the c...    1.0   10     4   
+12  Location y is positioned to the left of locati...    1.0   10     6   
+13  The action 'pushUp' directly involves the crat...    1.0    9     2   
+14  The action 'moveLeft' requires location y to b...    1.0    9     6   
+15  The action 'moveRight' requires location y to ...    1.0    9     6   
+16  The action 'moveUp' requires location y to be ...    1.0    9     6   
+17  The action 'moveDown' requires location y to b...    1.0    9     6   
+18  The action 'pushLeft' requires location z to b...    1.0    9     2   
+19  The action 'pushRight' requires location z to ...    1.0    9     2   
+20  Location x is positioned to the left of locati...    1.0    8     6   
+21  The action 'pushLeft' requires the predicate '...    1.0    7     4   
+22  The action 'pushLeft' requires the predicate '...    1.0    7     4   
+23  The action 'pushRight' requires the predicate ...    1.0    7     4   
+24  The action 'pushRight' requires the predicate ...    1.0    7     4   
+25  Location x is positioned to the left of locati...    1.0    6     1   
+26  Crate1 is currently located at position l9, es...    1.0    6     1   
+27  The goal includes the condition that crate2 mu...    1.0    6     2   
+28  The goal includes the condition that crate1 mu...    1.0    5     1   
+29  The sokoban2 can potentially move to location ...    1.0   15     2   
+30  The sokoban2 can potentially move to location ...    1.0   14     2   
+31  The action 'pushDown' involves the sokoban as ...    1.0   13     2   
+32  The action 'pushDown' directly involves the cr...    1.0    9     2   
+33  The action 'pushUp' requires the sokoban to be...    1.0    8     2   
+34  Location l13 is positioned below location l9, ...    1.0    7     2   
+35  Location l9 is positioned below location l5, e...    1.0    6     2   
+36  The action 'moveLeft' requires the predicate '...    1.0    5     2   
+37  The action 'moveRight' requires the predicate ...    1.0    5     2   
+38  The action 'moveUp' requires the predicate 'be...    1.0    5     2   
+39  The action 'moveDown' requires the predicate '...    1.0    5     2   
+40  Location x is positioned below location y, est...    1.0    5     2   
+41  The sokoban2 can potentially move to location ...    1.0   16     1   
+42  The sokoban2 can potentially move to location ...    1.0   15     1   
+43  The sokoban2 can potentially move to location ...    1.0   14     1   
+44  The sokoban2 can potentially move to location ...    1.0   14     1   
+45  The sokoban2 can potentially move to location ...    1.0   14     1   
+46  The sokoban2 can potentially move to location ...    1.0   14     1   
+47  The sokoban2 can potentially move to location ...    1.0   13     1   
+48  Crate2 is currently located at position l15, e...    1.0    8     1   
+49  The action 'pushUp' results in the crate being...    1.0    7     1   
+50  Crate2 needs to be moved to location l2 as par...    1.0    6     1   
+
+    in_context  
+0         True  
+1         True  
+2         True  
+3         True  
+4         True  
+5         True  
+6         True  
+7         True  
+8         True  
+9         True  
+10        True  
+11        True  
+12        True  
+13        True  
+14        True  
+15        True  
+16        True  
+17        True  
+18        True  
+19        True  
+20        True  
+21        True  
+22        True  
+23        True  
+24        True  
+25        True  
+26        True  
+27        True  
+28        True  
+29        True  
+30        True  
+31        True  
+32        True  
+33        True  
+34        True  
+35        True  
+36        True  
+37        True  
+38        True  
+39        True  
+40        True  
+41        True  
+42        True  
+43        True  
+44        True  
+45        True  
+46        True  
+47        True  
+48        True  
+49        True  
+50        True  , 'entities':     id      entity                                        description  \
+0    0     SOKOBAN  The "SOKOBAN" is an object that serves as the ...   
+1    1       CRATE  The "CRATE" is an object within the sokoban ga...   
+2   38        GOAL  The goal is a specific condition that must be ...   
+3   35      CRATE1  The crate1 is an object that can be pushed by ...   
+4   34    SOKOBAN2  The sokoban2 is an object representing the pla...   
+5   36      CRATE2  The crate2 is another object that can be pushe...   
+6   13       CLEAR  The predicate 'clear' indicates whether a loca...   
+7    7      MOVEUP  The action 'moveUp' allows the sokoban to move...   
+8    8    MOVEDOWN  The action 'moveDown' allows the sokoban to mo...   
+9   12          AT  The predicate 'at' indicates the relationship ...   
+10   5    MOVELEFT  The action 'moveLeft' allows the sokoban to mo...   
+11  17           X  Location x is a position in the game where the...   
+12   6   MOVERIGHT  The action 'moveRight' allows the sokoban to m...   
+13  10   PUSHRIGHT  The action of moving a crate to the right towa...   
+14   9    PUSHLEFT  The action of moving a crate to the left towar...   
+15   4  LOCATION Z  Location z is a target position in the game wh...   
+16   2  LOCATION X  Location x is a position in the game where the...   
+17  15      PUSHUP  The action of moving a crate upwards to a high...   
+18   3  LOCATION Y  Location y is a position in the game where the...   
+19  24          L9  L9 is a defined point within the game environm...   
+
+   number of relationships  in_context  
+0                        9        True  
+1                        5        True  
+2                        2        True  
+3                        3        True  
+4                       11        True  
+5                        4        True  
+6                        2        True  
+7                        3        True  
+8                        3        True  
+9                        2        True  
+10                       3        True  
+11                       1        True  
+12                       3        True  
+13                       5        True  
+14                       5        True  
+15                       4        True  
+16                       2        True  
+17                       4        True  
+18                       6        True  
+19                       3        True  , 'sources':   id                                               text
+0  0  (define (domain sokoban)\n\t(:requirements :st...
+1  1  \t(:action pushUp\n\t\t:parameters (?sokoban ?...
+2  2   l10)\n\t\t   (at sokoban2 l16)\n\t\t   (at cr...}, context_text='id|title|content\n2|Sokoban Game Dynamics: Actions and Locations|"# Sokoban Game Dynamics: Actions and Locations\n\nThe community surrounding the Sokoban game is characterized by a complex interplay of actions and locations, where specific movements of the sokoban are contingent upon the spatial relationships between various locations. Key actions such as \'moveLeft\' and \'moveRight\' are integral to the gameplay, influencing how players navigate the game environment.\n\n## Key Actions: MoveLeft and MoveRight\n\nThe actions \'moveLeft\' and \'moveRight\' are fundamental to the Sokoban game, allowing the sokoban to navigate the game environment. These actions are contingent upon specific conditions being met, such as the availability of clear paths in the respective directions. For instance, \'moveLeft\' requires that the location to the left of the sokoban is unoccupied, which is essential for successful gameplay. This highlights the importance of understanding the spatial dynamics involved in these actions. [records: Entities (5, 6), Relationships (1, 2, 16, 17)]\n\n## Spatial Relationships Among Locations\n\nThe relationships between various locations, such as Location X, Y, and Z, are crucial for determining the sokoban\'s movement options. For example, Location Y is positioned to the left of Location Z, which establishes a spatial relationship that influences the sokoban\'s ability to push crates or move to adjacent locations. Understanding these relationships is vital for players to strategize their moves effectively and solve puzzles within the game. [records: Entities (2, 3, 4), Relationships (15, 13, 14)]\n\n## Role of Location Y in Movement Actions\n\nLocation Y serves as a pivotal point in the game, being involved in multiple movement actions such as \'moveLeft\', \'moveRight\', \'moveUp\', and \'moveDown\'. Each of these actions requires that Location Y is clear for the sokoban to move successfully. This indicates that Location Y is not only a reference point but also a critical location that players must navigate carefully to progress in the game. [records: Entities (3), Relationships (16, 17, 18, 19)]\n\n## Pushing Crates: Location Z\'s Importance\n\nLocation Z plays a significant role in the gameplay mechanics, particularly in actions related to pushing crates. The actions \'pushLeft\' and \'pushRight\' require that Location Z is clear for successful execution. This emphasizes the strategic importance of managing the state of Location Z, as it directly affects the player\'s ability to manipulate crates and solve puzzles. [records: Entities (4), Relationships (20, 21)]\n\n## The Predicate \'leftOf\' in Movement Actions\n\nThe predicate \'leftOf\' is essential for establishing the spatial relationships necessary for the sokoban\'s movement actions. Both \'moveLeft\' and \'moveRight\' rely on this predicate to determine if the intended movement is feasible. This highlights the importance of logical conditions in gameplay, where players must assess the spatial layout to make informed decisions. [records: Entities (14), Relationships (22, 23)]"\n\n\nid|title|content\n2|Sokoban Game Dynamics: Actions and Locations|"# Sokoban Game Dynamics: Actions and Locations\n\nThe community surrounding the Sokoban game is characterized by a complex interplay of actions and locations, where specific movements of the sokoban are contingent upon the spatial relationships between various locations. Key actions such as \'moveLeft\' and \'moveRight\' are integral to the gameplay, influencing how players navigate the game environment.\n\n## Key Actions: MoveLeft and MoveRight\n\nThe actions \'moveLeft\' and \'moveRight\' are fundamental to the Sokoban game, allowing the sokoban to navigate the game environment. These actions are contingent upon specific conditions being met, such as the availability of clear paths in the respective directions. For instance, \'moveLeft\' requires that the location to the left of the sokoban is unoccupied, which is essential for successful gameplay. This highlights the importance of understanding the spatial dynamics involved in these actions. [records: Entities (5, 6), Relationships (1, 2, 16, 17)]\n\n## Spatial Relationships Among Locations\n\nThe relationships between various locations, such as Location X, Y, and Z, are crucial for determining the sokoban\'s movement options. For example, Location Y is positioned to the left of Location Z, which establishes a spatial relationship that influences the sokoban\'s ability to push crates or move to adjacent locations. Understanding these relationships is vital for players to strategize their moves effectively and solve puzzles within the game. [records: Entities (2, 3, 4), Relationships (15, 13, 14)]\n\n## Role of Location Y in Movement Actions\n\nLocation Y serves as a pivotal point in the game, being involved in multiple movement actions such as \'moveLeft\', \'moveRight\', \'moveUp\', and \'moveDown\'. Each of these actions requires that Location Y is clear for the sokoban to move successfully. This indicates that Location Y is not only a reference point but also a critical location that players must navigate carefully to progress in the game. [records: Entities (3), Relationships (16, 17, 18, 19)]\n\n## Pushing Crates: Location Z\'s Importance\n\nLocation Z plays a significant role in the gameplay mechanics, particularly in actions related to pushing crates. The actions \'pushLeft\' and \'pushRight\' require that Location Z is clear for successful execution. This emphasizes the strategic importance of managing the state of Location Z, as it directly affects the player\'s ability to manipulate crates and solve puzzles. [records: Entities (4), Relationships (20, 21)]\n\n## The Predicate \'leftOf\' in Movement Actions\n\nThe predicate \'leftOf\' is essential for establishing the spatial relationships necessary for the sokoban\'s movement actions. Both \'moveLeft\' and \'moveRight\' rely on this predicate to determine if the intended movement is feasible. This highlights the importance of logical conditions in gameplay, where players must assess the spatial layout to make informed decisions. [records: Entities (14), Relationships (22, 23)]"\n\n\n-----Entities-----\nid|entity|description|number of relationships\n0|SOKOBAN|The "SOKOBAN" is an object that serves as the player or character within the game, primarily tasked with pushing crates and navigating the game environment. This role is central to the gameplay mechanics, as the sokoban\'s actions directly influence the progression and challenges faced in the game.|9\n1|CRATE|The "CRATE" is an object within the sokoban game environment that the sokoban character can push around. It is essential to note that moving the crate requires specific conditions to be met, indicating that its movement is not arbitrary but rather dependent on the game\'s mechanics. This duality highlights the strategic element of the game, where players must consider the placement and movement of crates to solve puzzles effectively.|5\n38|GOAL|The goal is a specific condition that must be achieved in the game, which in this case is having crate1 at location l9 and crate2 at location l2.|2\n35|CRATE1|The crate1 is an object that can be pushed by the sokoban2 within the game environment, initially located at position l9.|3\n34|SOKOBAN2|The sokoban2 is an object representing the player or character in the game, responsible for pushing crates and navigating the environment.|11\n36|CRATE2|The crate2 is another object that can be pushed by the sokoban2, initially located at position l15.|4\n13|CLEAR|The predicate \'clear\' indicates whether a location is unoccupied and available for movement or pushing actions, which is crucial for the sokoban\'s actions.|2\n7|MOVEUP|The action \'moveUp\' allows the sokoban to move from one location to another, specifically from a lower location to a higher one, given certain conditions are met.|3\n8|MOVEDOWN|The action \'moveDown\' allows the sokoban to move from a higher location to a lower one, contingent on specific preconditions.|3\n12|AT|The predicate \'at\' indicates the relationship between an object and its current location, specifying where the sokoban or crate is positioned in the game environment.|2\n5|MOVELEFT|The action \'moveLeft\' allows the sokoban to move from one location to another, specifically to a location that is to the left of its current position, given certain conditions are met.|3\n17|X|Location x is a position in the game where the sokoban is initially located before pushing the crate.|1\n6|MOVERIGHT|The action \'moveRight\' allows the sokoban to move from one location to another, specifically to a location that is to the right of its current position, contingent on specific preconditions.|3\n10|PUSHRIGHT|The action of moving a crate to the right towards location z, indicating a spatial manipulation in a game environment.|5\n9|PUSHLEFT|The action of moving a crate to the left towards location z, indicating a spatial manipulation in a game environment.|5\n4|LOCATION Z|Location z is a target position in the game where the crate can be pushed to, indicating a spatial manipulation.|4\n2|LOCATION X|Location x is a position in the game where the sokoban or crate can be located, serving as a reference point for movement.|2\n15|PUSHUP|The action of moving a crate upwards to a higher location, indicating a spatial manipulation in a game environment.|4\n3|LOCATION Y|Location y is a position in the game where the sokoban or crate can be located, often used in relation to other locations.|6\n24|L9|L9 is a defined point within the game environment that serves to establish spatial relationships among various elements in the game. Specifically, L9 is the location where crate1 is currently situated, highlighting its role in the game\'s spatial dynamics and interactions.|3\n\n\n-----Relationships-----\nid|source|target|description|weight|rank|links\n65|SOKOBAN2|CRATE2|The sokoban2 is the character that interacts with and can push crate2 in the game environment.|1.0|15|2\n0|SOKOBAN|CRATE|The sokoban is the character that interacts with and pushes the crate in the game environment.|1.0|14|1\n5|SOKOBAN|PUSHLEFT|The action \'pushLeft\' involves the sokoban as the character pushing the crate to the left towards location z.|1.0|14|4\n6|SOKOBAN|PUSHRIGHT|The action \'pushRight\' involves the sokoban as the character pushing the crate to the right towards location z.|1.0|14|4\n64|SOKOBAN2|CRATE1|The sokoban2 is the character that interacts with and can push crate1 in the game environment.|1.0|14|1\n7|SOKOBAN|PUSHUP|The action \'pushUp\' involves the sokoban as the character that pushes the crate to a new location.|1.0|13|2\n1|SOKOBAN|MOVELEFT|The action \'moveLeft\' involves the sokoban as the object being moved to a new location to the left.|1.0|12|1\n2|SOKOBAN|MOVERIGHT|The action \'moveRight\' involves the sokoban as the object being moved to a new location to the right.|1.0|12|1\n3|SOKOBAN|MOVEUP|The action \'moveUp\' involves the sokoban as the object being moved to a new location above its current position.|1.0|12|1\n4|SOKOBAN|MOVEDOWN|The action \'moveDown\' involves the sokoban as the object being moved to a new location below its current position.|1.0|12|1\n9|CRATE|PUSHLEFT|The action \'pushLeft\' directly involves the crate being moved to location z, indicating a direct action towards that location.|1.0|10|4\n10|CRATE|PUSHRIGHT|The action \'pushRight\' directly involves the crate being moved to location z, indicating a direct action towards that location.|1.0|10|4\n15|LOCATION Y|LOCATION Z|Location y is positioned to the left of location z, establishing a spatial relationship between the two locations.|1.0|10|6\n11|CRATE|PUSHUP|The action \'pushUp\' directly involves the crate being moved to a higher location.|1.0|9|2\n16|LOCATION Y|MOVELEFT|The action \'moveLeft\' requires location y to be clear and to the left of location x for the sokoban to move successfully.|1.0|9|6\n17|LOCATION Y|MOVERIGHT|The action \'moveRight\' requires location y to be clear and to the right of location x for the sokoban to move successfully.|1.0|9|6\n18|LOCATION Y|MOVEUP|The action \'moveUp\' requires location y to be clear and above location x for the sokoban to move successfully.|1.0|9|6\n19|LOCATION Y|MOVEDOWN|The action \'moveDown\' requires location y to be clear and below location x for the sokoban to move successfully.|1.0|9|6\n20|LOCATION Z|PUSHLEFT|The action \'pushLeft\' requires location z to be clear for the crate to be pushed successfully.|1.0|9|2\n21|LOCATION Z|PUSHRIGHT|The action \'pushRight\' requires location z to be clear for the crate to be pushed successfully.|1.0|9|2\n13|LOCATION X|LOCATION Y|Location x is positioned to the left of location y, establishing a spatial relationship between the two locations.|1.0|8|6\n26|PUSHLEFT|AT|The action \'pushLeft\' requires the predicate \'at\' to confirm the current position of the sokoban and the crate before executing the push action.|1.0|7|4\n27|PUSHLEFT|CLEAR|The action \'pushLeft\' requires the predicate \'clear\' to ensure that the destination location z is unoccupied before pushing the crate.|1.0|7|4\n28|PUSHRIGHT|AT|The action \'pushRight\' requires the predicate \'at\' to confirm the current position of the sokoban and the crate before executing the push action.|1.0|7|4\n29|PUSHRIGHT|CLEAR|The action \'pushRight\' requires the predicate \'clear\' to ensure that the destination location z is unoccupied before pushing the crate.|1.0|7|4\n14|LOCATION X|LOCATION Z|Location x is positioned to the left of location z, establishing a spatial relationship between the two locations.|1.0|6|1\n45|L9|CRATE1|Crate1 is currently located at position l9, establishing its spatial relationship with that location.|1.0|6|1\n67|CRATE2|GOAL|The goal includes the condition that crate2 must be at location l2, linking the goal to the crate\'s position.|1.0|6|2\n66|CRATE1|GOAL|The goal includes the condition that crate1 must be at location l9, linking the goal to the crate\'s position.|1.0|5|1\n50|L13|SOKOBAN2|The sokoban2 can potentially move to location l13, which is clear and available for movement.|1.0|15|2\n41|L5|SOKOBAN2|The sokoban2 can potentially move to location l5, which is clear and available for movement.|1.0|14|2\n8|SOKOBAN|PUSHDOWN|The action \'pushDown\' involves the sokoban as the character that pushes the crate to a new location.|1.0|13|2\n12|CRATE|PUSHDOWN|The action \'pushDown\' directly involves the crate being moved to a lower location.|1.0|9|2\n30|PUSHUP|Y|The action \'pushUp\' requires the sokoban to be at location y before pushing the crate upwards.|1.0|8|2\n44|L9|L13|Location l13 is positioned below location l9, establishing a vertical spatial relationship between the two locations.|1.0|7|2\n40|L5|L9|Location l9 is positioned below location l5, establishing a vertical spatial relationship between the two locations.|1.0|6|2\n22|MOVELEFT|LEFTOF|The action \'moveLeft\' requires the predicate \'leftOf\' to establish the spatial relationship necessary for the sokoban to move successfully to the left.|1.0|5|2\n23|MOVERIGHT|LEFTOF|The action \'moveRight\' requires the predicate \'leftOf\' to establish the spatial relationship necessary for the sokoban to move successfully to the right.|1.0|5|2\n24|MOVEUP|BELOW|The action \'moveUp\' requires the predicate \'below\' to establish the spatial relationship necessary for the sokoban to move successfully upwards.|1.0|5|2\n25|MOVEDOWN|BELOW|The action \'moveDown\' requires the predicate \'below\' to establish the spatial relationship necessary for the sokoban to move successfully downwards.|1.0|5|2\n34|X|Y|Location x is positioned below location y, establishing a spatial relationship between the two locations.|1.0|5|2\n53|L14|SOKOBAN2|The sokoban2 can potentially move to location l14, which is clear and available for movement.|1.0|16|1\n58|L11|SOKOBAN2|The sokoban2 can potentially move to location l11, which is clear and available for movement.|1.0|15|1\n43|L6|SOKOBAN2|The sokoban2 can potentially move to location l6, which is clear and available for movement.|1.0|14|1\n60|L12|SOKOBAN2|The sokoban2 can potentially move to location l12, which is clear and available for movement.|1.0|14|1\n62|L17|SOKOBAN2|The sokoban2 can potentially move to location l17, which is clear and available for movement.|1.0|14|1\n63|L18|SOKOBAN2|The sokoban2 can potentially move to location l18, which is clear and available for movement.|1.0|14|1\n37|L1|SOKOBAN2|The sokoban2 can potentially move to location l1, which is clear and available for movement.|1.0|13|1\n56|L15|CRATE2|Crate2 is currently located at position l15, establishing its spatial relationship with that location.|1.0|8|1\n31|PUSHUP|Z|The action \'pushUp\' results in the crate being moved to location z, indicating a direct action towards that location.|1.0|7|1\n39|L2|CRATE2|Crate2 needs to be moved to location l2 as part of the goal, indicating a direct action towards that location.|1.0|6|1\n\n\n-----Sources-----\nid|text\n0|(define (domain sokoban)\n\t(:requirements :strips)\n\t(:predicates (sokoban ?x)   \t\t\t\t\t\t\t\t;sokoban is at location x\n\t\t\t\t (crate ?x)     \t\t\t\t\t\t\t\t;crate is at location x\n\t\t\t\t (leftOf ?x ?y) \t\t\t\t\t\t\t\t;location x is to the left of locaiton y\n\t\t\t\t (below ?x ?y)  \t\t\t\t\t\t\t\t;location x is below location y\n\t\t\t\t (at ?x ?y)     \t\t\t\t\t\t\t\t;object x is at location y\n\t\t\t\t (clear ?x))\t\t\t\t\t\t\t\t\t;x is a location\n\n\t(:action moveLeft\n\t\t:parameters (?sokoban ?x ?y)\n\t\t:precondition (and (sokoban ?sokoban)\n\t\t\t\t\t\t   (at ?sokoban ?x)\n\t\t\t\t\t\t   (leftOf ?y ?x)   \t\t\t\t\t;location y is to the left of location x\n\t\t\t\t\t\t   (clear ?y))      \t\t\t\t\t;and y is empty/clear, so move left to y\n\t\t:effect (and (at ?sokoban ?y) (clear ?x)\n\t\t\t\t(not (at ?sokoban ?x)) (not (clear ?y))))\n\n\t(:action moveRight\n\t\t:parameters (?sokoban ?x ?y)\n\t\t:precondition (and (sokoban ?sokoban)\n\t\t\t\t\t\t\t(at ?sokoban ?x)\n\t\t\t\t\t\t\t(leftOf ?x ?y)    \t\t\t\t\t;location x is to the left of y\n\t\t\t\t\t\t\t(clear ?y))       \t\t\t\t\t;and y is clear, so move right to y\n\t\t:effect (and (at ?sokoban ?y) (clear ?x)\n\t\t\t\t(not (at ?sokoban ?x)) (not (clear ?y))))\n\n\t(:action moveUp\n\t\t:parameters (?sokoban ?x ?y)\n\t\t:precondition (and (sokoban ?sokoban)\n\t\t\t\t\t\t  (at ?sokoban ?x)\n\t\t\t\t\t\t  (below ?x ?y)      \t\t\t\t\t;location x is below location y\n\t\t\t\t\t\t  (clear ?y))        \t\t\t\t\t;and y is clear, so move up to y\n\t\t:effect (and (at ?sokoban ?y) (clear ?x)\n\t\t\t\t(not (at ?sokoban ?x)) (not (clear ?y))))\n\n\t(:action moveDown\n\t\t:parameters (?sokoban ?x ?y)\n\t\t:precondition (and (sokoban ?sokoban)\n\t\t\t\t\t\t  (at ?sokoban ?x)\n\t\t\t\t\t\t  (below ?y ?x)      \t\t\t\t\t;location y is below location x\n\t\t\t\t\t\t  (clear ?y))        \t\t\t\t\t;and y is clear, so move down to y\n\t\t:effect (and (at ?sokoban ?y) (clear ?x)\n\t\t\t\t(not (at ?sokoban ?x)) (not (clear ?y))))\n\n\t(:action pushLeft\n\t\t:parameters (?sokoban ?x ?y ?z ?crate)\n\t\t:precondition (and (sokoban ?sokoban)\n\t\t\t\t\t\t\t(crate ?crate)\n\t\t\t\t\t\t\t(leftOf ?y ?x)  \t\t\t\t\t;location y is left of x\n\t\t\t\t\t\t\t(leftOf ?z ?y)    \t\t\t\t\t;z (destination for block) is left of where the block currently is\n\t\t\t\t\t\t\t(at ?sokoban ?x)   \t\t\t\t\t;sokoban player is at x\n\t\t\t\t\t\t\t(at ?crate ?y)     \t\t\t\t\t;crate is at y\t\t\t\t\t\t\t    \t\t\t\t\t\n\t\t\t\t\t\t\t(clear ?z))        \t\t\t\t\t;and location z is clear, so push crate left to z\n\t\t:effect (and (at ?sokoban ?y) (at ?crate ?z) \n\t\t\t\t(clear ?x) \n\t\t\t\t(not (at ?sokoban ?x)) \n\t\t\t\t(not (at ?crate ?y)) \n\t\t\t\t(not (clear ?z)) \n\t\t\t\t(not (clear ?y))))\n\t\t\t   \n\t(:action pushRight\n\t\t:parameters (?sokoban ?x ?y ?z ?crate)\n\t\t:precondition (and (sokoban ?sokoban)\n\t\t\t\t\t\t\t(crate ?crate)\n\t\t\t\t\t\t\t(leftOf ?x ?y)\t\t\t\t\t\t;x is left of y\n\t\t\t\t\t\t\t(leftOf ?y ?z)\t\t\t\t\t\t;y is left of z\n\t\t\t\t\t\t\t(at ?sokoban ?x)\t\t\t\t\t;sokoban is at x\n\t\t\t\t\t\t\t(at ?crate ?y)\t\t\t\t\t\t;crate is at y\n\t\t\t\t\t\t\t(clear ?z))\t\t\t\t\t\t\t;z is clear, so push crate right to z\n\t\t:effect (and (at ?sokoban ?y) (at ?crate ?z) \n\t\t\t\t(clear ?x)\n\t\t\t\t(not (at ?sokoban ?x))\n\t\t\t\t(not (at ?crate ?y))\n\t\t\t\t(not (clear ?z))\n\t\t\t\t(not (clear ?y))))\n\n\t(:action pushUp\n\t\t:parameters (?sokoban ?x ?y ?z ?crate)\n\t\t:precondition (and (sokoban ?sokoban)\n\t\t\t\t\t\t\t(crate ?crate)\n\t\t\t\t\t\t\t(below ?x ?y)\t\t\t\t\t\t;x is below y\n\t\t\t\t\t\t\t(below ?y ?z)\t\t\t\t\t\t;y is below z\n\t\t\t\t\t\t\t(at ?sokoban ?x)\t\t\t\t\t;sokoban is at x\n1|\t(:action pushUp\n\t\t:parameters (?sokoban ?x ?y ?z ?crate)\n\t\t:precondition (and (sokoban ?sokoban)\n\t\t\t\t\t\t\t(crate ?crate)\n\t\t\t\t\t\t\t(below ?x ?y)\t\t\t\t\t\t;x is below y\n\t\t\t\t\t\t\t(below ?y ?z)\t\t\t\t\t\t;y is below z\n\t\t\t\t\t\t\t(at ?sokoban ?x)\t\t\t\t\t;sokoban is at x\n\t\t\t\t\t\t\t(at ?crate ?y)\t\t\t\t\t\t;crate is at y\n\t\t\t\t\t\t\t(clear ?z))\t\t\t\t\t\t\t;z is clear, so push crate up to z\n\t\t:effect (and (at ?sokoban ?y) (at ?crate ?z)\n\t\t\t\t(clear ?x)\n\t\t\t\t(not (at ?sokoban ?x))\n\t\t\t\t(not (at ?crate ?y))\n\t\t\t\t(not (clear ?y))\n\t\t\t\t(not (clear ?z))))\n\n\n\t(:action pushDown\n\t\t:parameters (?sokoban ?x ?y ?z ?crate)\n\t\t:precondition (and (sokoban ?sokoban)\n\t\t\t\t\t\t\t(crate ?crate)\n\t\t\t\t\t\t\t(below ?y ?x)\t\t\t\t\t\t;y is below x\n\t\t\t\t\t\t\t(below ?z ?y)\t\t\t\t\t\t;z is below y\n\t\t\t\t\t\t\t(at ?sokoban ?x)\t\t\t\t\t;sokoban is at x\n\t\t\t\t\t\t\t(at ?crate ?y)\t\t\t\t\t\t;crate is at y\n\t\t\t\t\t\t\t(clear ?z))\t\t\t\t\t\t\t;z is clear, so push crate down to z\n\t\t:effect (and (at ?sokoban ?y) (at ?crate ?z)\n\t\t\t\t(clear ?x)\n\t\t\t\t(not (at ?sokoban ?x))\n\t\t\t\t(not (at ?crate ?y))\n\t\t\t\t(not (clear ?y))\n\t\t\t\t(not (clear ?z))))\n)\n\n(define (problem s1)\n\t(:domain sokoban)\n\t(:objects sokoban, crate2, l1, l2, l5, l6, l9, l10, l11, l12, l13, l14, l15, l16, l17, l18)\n\t(:init (sokoban sokoban) \n\t\t   (crate crate2)\n\n\t\t   ;;horizontal relationships\n\t\t   (leftOf l1 l2) \n\t\t   (leftOf l5 l6) \n\t\t   (leftOf l9 l10) (leftOf l10 l11) (leftOf l11 l12) \n \t\t   (leftOf l13 l14) (leftOf l14 l15) (leftOf l15 l16)\n \t\t   (leftOf l17 l18)\n\n \t\t   ;;vertical relationships\n \t\t   (below l5 l1) (below l6 l2)\n \t\t   (below l9 l5) (below l10 l6)\n \t\t   (below l13 l9) (below l14 l10) (below l15 l11) (below l16 l12)\n \t\t   (below l17 l13) (below l18 l14)\n\n \t\t   ;;initialize sokoban and crate\n\t\t   (at sokoban l10)\n \t\t   (at crate2 l15) \n\n \t\t   ;;clear spaces\n\t\t   (clear l1) \n\t\t   (clear l2) \n\t\t   (clear l5) \n\t\t   (clear l6) \n\t\t   (clear l9)\n\t\t   (clear l11)\n\t\t   (clear l12) \n\t\t   (clear l13) \n\t\t   (clear l14)\n\t\t   (clear l16) \n\t\t   (clear l17)   \t\t\t\t\n\t\t   (clear l18))\n\n\t(:goal (and (at crate2 l2)))\n)\n\n(define (problem s2)\n\t(:domain sokoban)\n\t(:objects sokoban1, sokoban2, crate1, crate2, l1, l2, l5, l6, l9, l10, l11, l12, l13, l14, l15, l16, l17, l18)\n\t(:init (sokoban sokoban1) \n\t\t   (sokoban sokoban2)\n\t\t   (crate crate1)\t\n\t\t   (crate crate2)\n\t\t   \n\t\t   ;;horizontal relationships\n\t\t   (leftOf l1 l2) \n\t\t   (leftOf l5 l6) \n\t\t   (leftOf l9 l10) (leftOf l10 l11) (leftOf l11 l12) \n \t\t   (leftOf l13 l14) (leftOf l14 l15) (leftOf l15 l16)\n \t\t   (leftOf l17 l18)\n\n \t\t   ;;vertical relationships\n \t\t   (below l5 l1) (below l6 l2)\n \t\t   (below l9 l5) (below l10 l6)\n \t\t   (below l13 l9) (below l14 l10) (below l15 l11) (below l16 l12)\n \t\t   (below l17 l13) (below l18 l14)\n\n \t\t   ;;initialize sokoban and crate\n\t\t   (at sokoban1 l10)\n\t\t   (at sokoban2 l16)\n\t\t   (at crate1 l9)\n \t\t   (at crate2 l15) \n\n \t\t   ;;clear spaces\n\t\t   (clear l1) \n\t\t   (clear l2) \n\t\t   (clear l5) \n\t\t   (clear l6) \n\t\t   (clear l11)\n\t\t   (clear l12) \n\t\t   (clear l13) \n\t\t   (clear l14)\n\t\t   (clear l17)   \t\t\t\t\n\t\t  \n2| l10)\n\t\t   (at sokoban2 l16)\n\t\t   (at crate1 l9)\n \t\t   (at crate2 l15) \n\n \t\t   ;;clear spaces\n\t\t   (clear l1) \n\t\t   (clear l2) \n\t\t   (clear l5) \n\t\t   (clear l6) \n\t\t   (clear l11)\n\t\t   (clear l12) \n\t\t   (clear l13) \n\t\t   (clear l14)\n\t\t   (clear l17)   \t\t\t\t\n\t\t   (clear l18))\n\n\t(:goal (and (at crate1 l9) (at crate2 l2)))\n)\n\n', completion_time=9.247802734375, llm_calls=1, prompt_tokens=7321)
