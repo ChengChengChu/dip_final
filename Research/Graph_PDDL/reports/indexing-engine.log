@@ -1,0 +1,236 @@
+(graphrag) (base) zhangzizhong@zhangzizhongdeMacBook-Air graphrag_cgi % python -m graphrag.index --root ./Graph_PDDL 
+🚀 Reading settings from Graph_PDDL/settings.yaml
+/opt/homebrew/Caskroom/miniforge/base/envs/graphrag/lib/python3.11/site-packages/numpy/core/fromnumeric.py:59: FutureWarning: 
+'DataFrame.swapaxes' is deprecated and will be removed in a future version. Please use 'DataFrame.transpose' instead.
+  return bound(*args, **kwds)
+🚀 create_base_text_units
+                                  id  ... n_tokens
+0   82cf4c7c174acb518c35fedddc4c389f  ...     1200
+1   986cddee6d7f2326ba76a0b5022599ca  ...     1200
+2   0f3969a320ce2970f1e7d7bb56d14116  ...     1200
+3   8a6ad025a7df9b5b0bfdc75058a12cfd  ...     1200
+4   ae1f0336c58e23a0ad86a060639755c9  ...     1200
+5   06e4657fd3359c4741a480652dae616c  ...     1200
+6   bf7f32c29f5be7503d1c6a818e1086ac  ...     1200
+7   a33289b1683704fd78a07aac326d326c  ...     1200
+8   84dc5179e82b359101c3133840141db7  ...     1200
+9   d85c5813db53598bd4002ca34fbd7665  ...     1200
+10  a4f4c64385b90f82ce887a3edc4a4b62  ...     1200
+11  face077b78475e973a88681b263d5aa8  ...     1200
+12  d1424b257022422187467b75dde41e8c  ...      273
+
+[13 rows x 5 columns]
+🚀 create_base_extracted_entities
+                                        entity_graph
+0  <graphml xmlns="http://graphml.graphdrawing.or...
+🚀 create_summarized_entities
+                                        entity_graph
+0  <graphml xmlns="http://graphml.graphdrawing.or...
+🚀 create_base_entity_graph
+   level                                    clustered_graph                                         embeddings
+0      0  <graphml xmlns="http://graphml.graphdrawing.or...  {'17TH TWENTE STUDENT CONFERENCE ON IT': [-0.0...
+1      1  <graphml xmlns="http://graphml.graphdrawing.or...  {'17TH TWENTE STUDENT CONFERENCE ON IT': [-0.0...
+2      2  <graphml xmlns="http://graphml.graphdrawing.or...  {'17TH TWENTE STUDENT CONFERENCE ON IT': [-0.0...
+/opt/homebrew/Caskroom/miniforge/base/envs/graphrag/lib/python3.11/site-packages/numpy/core/fromnumeric.py:59: FutureWarning: 
+'DataFrame.swapaxes' is deprecated and will be removed in a future version. Please use 'DataFrame.transpose' instead.
+  return bound(*args, **kwds)
+/opt/homebrew/Caskroom/miniforge/base/envs/graphrag/lib/python3.11/site-packages/numpy/core/fromnumeric.py:59: FutureWarning: 
+'DataFrame.swapaxes' is deprecated and will be removed in a future version. Please use 'DataFrame.transpose' instead.
+  return bound(*args, **kwds)
+🚀 create_final_entities
+                                   id  ...                              description_embedding
+0    b45241d70f0e43fca764df95b2b81f77  ...  [0.014661537483334541, 0.009691965766251087, 0...
+1    4119fd06010c494caa07f439b333f4c5  ...  [0.02016894333064556, 0.015872029587626457, 0....
+2    d3835bf3dda84ead99deadbeac5d0d7d  ...  [0.006808818783611059, 0.0040925052016973495, ...
+3    077d2820ae1845bcbb1803379a3d1eae  ...  [0.005580920726060867, 0.00960397720336914, 0....
+4    3671ea0dd4e84c1a9b02c5ab2c8f4bac  ...  [0.01622632145881653, 0.012612651102244854, -0...
+..                                ...  ...                                                ...
+133  8870cf2b5df64d2cab5820f67e29b9f1  ...  [0.014335955493152142, 0.03080780617892742, 0....
+134  cd130938a2844050be991af70baf5ee0  ...  [-0.010044152848422527, 0.033702436834573746, ...
+135  43544b99c3b04b059546198a0ae6366d  ...  [0.0050859940238296986, -0.02069728821516037, ...
+136  a671bf7fea2f4514b6e96ba99127fafd  ...  [-0.002972117392346263, 0.0049909139052033424,...
+137  525f41ea20274a05af4e52b625b473f3  ...  [0.007513375952839851, 0.03134028613567352, -0...
+
+[138 rows x 8 columns]
+/opt/homebrew/Caskroom/miniforge/base/envs/graphrag/lib/python3.11/site-packages/numpy/core/fromnumeric.py:59: FutureWarning: 
+'DataFrame.swapaxes' is deprecated and will be removed in a future version. Please use 'DataFrame.transpose' instead.
+  return bound(*args, **kwds)
+/opt/homebrew/Caskroom/miniforge/base/envs/graphrag/lib/python3.11/site-packages/datashaper/engine/verbs/convert.py:72: 
+FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_datetime without passing `errors` and 
+catch exceptions explicitly instead
+  datetime_column = pd.to_datetime(column, errors="ignore")
+/opt/homebrew/Caskroom/miniforge/base/envs/graphrag/lib/python3.11/site-packages/datashaper/engine/verbs/convert.py:72: 
+UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure 
+parsing is consistent and as-expected, please specify a format.
+  datetime_column = pd.to_datetime(column, errors="ignore")
+🚀 create_final_nodes
+     level            title          type  ...                 top_level_node_id         x         y
+0        0             A1筆記  ORGANIZATION  ...  b45241d70f0e43fca764df95b2b81f77 -3.763420  8.703471
+1        0             PDDL  ORGANIZATION  ...  4119fd06010c494caa07f439b333f4c5  2.336803  2.472333
+2        0  PLANNING GRAPHS         EVENT  ...  d3835bf3dda84ead99deadbeac5d0d7d       NaN       NaN
+3        0    INITIAL STATE         EVENT  ...  077d2820ae1845bcbb1803379a3d1eae       NaN       NaN
+4        0       GOAL STATE         EVENT  ...  3671ea0dd4e84c1a9b02c5ab2c8f4bac       NaN       NaN
+..     ...              ...           ...  ...                               ...       ...       ...
+409      2        ROOT NODE                ...  8870cf2b5df64d2cab5820f67e29b9f1       NaN       NaN
+410      2           ROBOTS  ORGANIZATION  ...  cd130938a2844050be991af70baf5ee0       NaN       NaN
+411      2     PROPOSITIONS         EVENT  ...  43544b99c3b04b059546198a0ae6366d       NaN       NaN
+412      2    SOLUTION PLAN         EVENT  ...  a671bf7fea2f4514b6e96ba99127fafd       NaN       NaN
+413      2    DUMMY ACTIONS                ...  525f41ea20274a05af4e52b625b473f3 -0.747867  5.419816
+
+[414 rows x 14 columns]
+/opt/homebrew/Caskroom/miniforge/base/envs/graphrag/lib/python3.11/site-packages/numpy/core/fromnumeric.py:59: FutureWarning: 
+'DataFrame.swapaxes' is deprecated and will be removed in a future version. Please use 'DataFrame.transpose' instead.
+  return bound(*args, **kwds)
+/opt/homebrew/Caskroom/miniforge/base/envs/graphrag/lib/python3.11/site-packages/numpy/core/fromnumeric.py:59: FutureWarning: 
+'DataFrame.swapaxes' is deprecated and will be removed in a future version. Please use 'DataFrame.transpose' instead.
+  return bound(*args, **kwds)
+🚀 create_final_communities
+    id         title  ...                                   relationship_ids                                      
+text_unit_ids
+0    4   Community 4  ...  [071a416efbec4f0886c19ac68f6d43cb, 6d8473ef3b1...  [82cf4c7c174acb518c35fedddc4c389f, 
+06e4657fd33...
+1    0   Community 0  ...  [66cdf168f36d4a57a505028c97dc06e0, 38f51478f41...  [986cddee6d7f2326ba76a0b5022599ca, 
+06e4657fd33...
+2    2   Community 2  ...  [04085f7cf46544b79597fc49286ff84d, eeef6ae5c46...                 
+[986cddee6d7f2326ba76a0b5022599ca]
+3    7   Community 7  ...  [d203efdbfb2f4b2a899abfb31cf72e82, 6731a665561...  
+[06e4657fd3359c4741a480652dae616c,8a6ad025a7df...
+4    1   Community 1  ...  [004f40a5aeca48a1879db728eb12bcba, 4465efb7f6e...  
+[8a6ad025a7df9b5b0bfdc75058a12cfd,a33289b16837...
+5    3   Community 3  ...  [3e1b063bbfa9423d84e50311296d2f3c, db541b72609...  
+[84dc5179e82b359101c3133840141db7,a33289b16837...
+6    6   Community 6  ...  [9a8ce816ee954bdabd01ea2081538009, 87915637da3...  
+[84dc5179e82b359101c3133840141db7,a33289b16837...
+7    5   Community 5  ...  [da1684437ab04f23adac28ff70bd8429, 70634e10a5e...                 
+8    8   Community 8  ...  [071a416efbec4f0886c19ac68f6d43cb, 6d8473ef3b1...  [82cf4c7c174acb518c35fedddc4c389f, 
+06e4657fd33...
+9   10  Community 10  ...  [c8b2408617804483b620e1a6691ac90d, a5e0d1644eb...  
+[06e4657fd3359c4741a480652dae616c,0f3969a320ce...
+10   9   Community 9  ...  [a0047221896d418d849847d422fa4bb8, f2ff8044718...  
+[0f3969a320ce2970f1e7d7bb56d14116,a33289b16837...
+11  11  Community 11  ...  [071a416efbec4f0886c19ac68f6d43cb, 6d8473ef3b1...  [82cf4c7c174acb518c35fedddc4c389f, 
+06e4657fd33...
+12  12  Community 12  ...  [c725babdb14a485582f8fbdf95429030, 422433aa458...  
+[0f3969a320ce2970f1e7d7bb56d14116,8a6ad025a7df...
+
+[13 rows x 6 columns]
+🚀 join_text_units_to_entity_ids
+                       text_unit_ids                                         entity_ids                                id
+0   82cf4c7c174acb518c35fedddc4c389f  [b45241d70f0e43fca764df95b2b81f77, 4119fd06010...  82cf4c7c174acb518c35fedddc4c389f
+1   06e4657fd3359c4741a480652dae616c  [4119fd06010c494caa07f439b333f4c5, 9646481f66c...  06e4657fd3359c4741a480652dae616c
+2   0f3969a320ce2970f1e7d7bb56d14116  [4119fd06010c494caa07f439b333f4c5, d91a266f766...  0f3969a320ce2970f1e7d7bb56d14116
+3   84dc5179e82b359101c3133840141db7  [4119fd06010c494caa07f439b333f4c5, d91a266f766...  84dc5179e82b359101c3133840141db7
+4   8a6ad025a7df9b5b0bfdc75058a12cfd  [4119fd06010c494caa07f439b333f4c5, d91a266f766...  8a6ad025a7df9b5b0bfdc75058a12cfd
+5   986cddee6d7f2326ba76a0b5022599ca  [4119fd06010c494caa07f439b333f4c5, c9632a35146...  986cddee6d7f2326ba76a0b5022599ca
+6   a33289b1683704fd78a07aac326d326c  [4119fd06010c494caa07f439b333f4c5, d91a266f766...  a33289b1683704fd78a07aac326d326c
+7   bf7f32c29f5be7503d1c6a818e1086ac  [4119fd06010c494caa07f439b333f4c5, e1fd0e904a5...  bf7f32c29f5be7503d1c6a818e1086ac
+8   d85c5813db53598bd4002ca34fbd7665  [4119fd06010c494caa07f439b333f4c5, d91a266f766...  d85c5813db53598bd4002ca34fbd7665
+9   face077b78475e973a88681b263d5aa8  [e7ffaee9d31d4d3c96e04f911d0a8f9e, e2f5735c7d7...  face077b78475e973a88681b263d5aa8
+10  ae1f0336c58e23a0ad86a060639755c9  [e1fd0e904a53409aada44442f23a51cb, 17ed1d92075...  ae1f0336c58e23a0ad86a060639755c9
+11  d1424b257022422187467b75dde41e8c  [e2f5735c7d714423a2c4f61ca2644626, 1745a2485a9...  d1424b257022422187467b75dde41e8c
+12  a4f4c64385b90f82ce887a3edc4a4b62  [460295fed3ae4cd39f9f274cec9c2506, 553b285bba6...  a4f4c64385b90f82ce887a3edc4a4b62
+/opt/homebrew/Caskroom/miniforge/base/envs/graphrag/lib/python3.11/site-packages/numpy/core/fromnumeric.py:59: FutureWarning: 
+'DataFrame.swapaxes' is deprecated and will be removed in a future version. Please use 'DataFrame.transpose' instead.
+  return bound(*args, **kwds)
+/opt/homebrew/Caskroom/miniforge/base/envs/graphrag/lib/python3.11/site-packages/numpy/core/fromnumeric.py:59: FutureWarning: 
+'DataFrame.swapaxes' is deprecated and will be removed in a future version. Please use 'DataFrame.transpose' instead.
+  return bound(*args, **kwds)
+/opt/homebrew/Caskroom/miniforge/base/envs/graphrag/lib/python3.11/site-packages/datashaper/engine/verbs/convert.py:65: 
+FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_numeric without passing `errors` and 
+catch exceptions explicitly instead
+  column_numeric = cast(pd.Series, pd.to_numeric(column, errors="ignore"))
+🚀 create_final_relationships
+                source                   target  weight  ... source_degree target_degree rank
+0                 A1筆記                     PDDL     1.0  ...             1            16   17
+1                 PDDL         GREEDY ALGORITHM     1.0  ...            16             1   17
+2                 PDDL  FACTORED REPRESENTATION     1.0  ...            16             1   17
+3                 PDDL                   GROOVE     7.0  ...            16            11   27
+4                 PDDL              AI PLANNING     1.0  ...            16             2   18
+..                 ...                      ...     ...  ...           ...           ...  ...
+112  REACHABILITY TREE       REACHABILITY GRAPH     1.0  ...             2             2    4
+113          LOCATIONS               CONTAINERS     1.0  ...             2             1    3
+114          LOCATIONS                   ROBOTS     1.0  ...             2             1    3
+115        CHILD NODES                ROOT NODE     1.0  ...             1             1    2
+116       PROPOSITIONS            SOLUTION PLAN     1.0  ...             1             2    3
+
+[117 rows x 10 columns]
+🚀 join_text_units_to_relationship_ids
+                                  id                                   relationship_ids
+0   82cf4c7c174acb518c35fedddc4c389f  [071a416efbec4f0886c19ac68f6d43cb, 6d8473ef3b1...
+1   06e4657fd3359c4741a480652dae616c  [18b839da898e4026b81727d759d95c6a, b1f6164116d...
+2   84dc5179e82b359101c3133840141db7  [18b839da898e4026b81727d759d95c6a, 9a6f414210e...
+3   8a6ad025a7df9b5b0bfdc75058a12cfd  [18b839da898e4026b81727d759d95c6a, 422433aa458...
+4   986cddee6d7f2326ba76a0b5022599ca  [18b839da898e4026b81727d759d95c6a, eeef6ae5c46...
+5   a33289b1683704fd78a07aac326d326c  [18b839da898e4026b81727d759d95c6a, db541b72609...
+6   bf7f32c29f5be7503d1c6a818e1086ac  [18b839da898e4026b81727d759d95c6a, 9a6f414210e...
+7   d85c5813db53598bd4002ca34fbd7665  [18b839da898e4026b81727d759d95c6a, 70634e10a5e...
+8   0f3969a320ce2970f1e7d7bb56d14116  [422433aa45804c7ebb973b2fafce5da6, 86505bca739...
+9   face077b78475e973a88681b263d5aa8  [cbf232211e7d4eb6abdbe182f71c2cf0, bb0cff774a4...
+10  ae1f0336c58e23a0ad86a060639755c9  [0e8d921ccd8d4a8594b65b7fd19f7120, 59c726a8792...
+11  d1424b257022422187467b75dde41e8c  [60c58026b2764b40adffca6eaa31d6d9, ad1595a7893...
+12  a4f4c64385b90f82ce887a3edc4a4b62  [4517768fc4e24bd2a790be0e08a7856e, 545edff3373...
+🚀 create_final_community_reports
+   community  ...                                    id
+0         11  ...  9221ca62-b9fb-43e5-95da-5f11d1733f3e
+1         12  ...  5fdffd48-d91d-4be9-a3ab-eabf0d11980b
+2         10  ...  ef6e8eba-4e35-44d1-808f-f91d9f7e24bd
+3          8  ...  d5096603-7a73-4ac1-aae4-18c91cc05d1b
+4          9  ...  ee165561-33ab-4f97-9458-2186ea1f2bad
+5          0  ...  323498fa-f6ad-409c-a890-ea3c9ec6d2a0
+6          1  ...  e3616efd-47dc-4333-b7f8-7592b82dc1ce
+7          2  ...  f639cdb4-a672-4b05-a9d5-829553e5a90c
+8          3  ...  638b9929-0d45-4dce-a8f5-0e1abf37931d
+9          4  ...  a1e2e789-93cd-4d71-839b-71a6ade3162b
+10         5  ...  5a40c577-9c2b-43e0-9ec7-eca90866108e
+11         6  ...  b0304746-b783-486d-8e38-2f61fde51d5c
+12         7  ...  2ba06e7b-ba67-49c7-9b78-5c4e16cd0cf4
+
+[13 rows x 10 columns]
+🚀 create_final_text_units
+                                  id  ...                                   relationship_ids
+0   82cf4c7c174acb518c35fedddc4c389f  ...  [071a416efbec4f0886c19ac68f6d43cb, 6d8473ef3b1...
+1   986cddee6d7f2326ba76a0b5022599ca  ...  [18b839da898e4026b81727d759d95c6a, eeef6ae5c46...
+2   0f3969a320ce2970f1e7d7bb56d14116  ...  [422433aa45804c7ebb973b2fafce5da6, 86505bca739...
+3   8a6ad025a7df9b5b0bfdc75058a12cfd  ...  [18b839da898e4026b81727d759d95c6a, 422433aa458...
+4   ae1f0336c58e23a0ad86a060639755c9  ...  [0e8d921ccd8d4a8594b65b7fd19f7120, 59c726a8792...
+5   06e4657fd3359c4741a480652dae616c  ...  [18b839da898e4026b81727d759d95c6a, b1f6164116d...
+6   bf7f32c29f5be7503d1c6a818e1086ac  ...  [18b839da898e4026b81727d759d95c6a, 9a6f414210e...
+7   a33289b1683704fd78a07aac326d326c  ...  [18b839da898e4026b81727d759d95c6a, db541b72609...
+8   84dc5179e82b359101c3133840141db7  ...  [18b839da898e4026b81727d759d95c6a, 9a6f414210e...
+9   d85c5813db53598bd4002ca34fbd7665  ...  [18b839da898e4026b81727d759d95c6a, 70634e10a5e...
+10  a4f4c64385b90f82ce887a3edc4a4b62  ...  [4517768fc4e24bd2a790be0e08a7856e, 545edff3373...
+11  face077b78475e973a88681b263d5aa8  ...  [cbf232211e7d4eb6abdbe182f71c2cf0, bb0cff774a4...
+12  d1424b257022422187467b75dde41e8c  ...  [60c58026b2764b40adffca6eaa31d6d9, ad1595a7893...
+
+[13 rows x 6 columns]
+/opt/homebrew/Caskroom/miniforge/base/envs/graphrag/lib/python3.11/site-packages/datashaper/engine/verbs/convert.py:72: 
+FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_datetime without passing `errors` and 
+catch exceptions explicitly instead
+  datetime_column = pd.to_datetime(column, errors="ignore")
+🚀 create_base_documents
+                                 id  ...          title
+0  1cbd0dbc66be9f85f38c73ffaa2c7c0f  ...  GraphPDDL.txt
+
+[1 rows x 4 columns]
+🚀 create_final_documents
+                                 id  ...          title
+0  1cbd0dbc66be9f85f38c73ffaa2c7c0f  ...  GraphPDDL.txt
+
+[1 rows x 4 columns]
+⠏ GraphRAG Indexer 
+├── Loading Input (InputFileType.text) - 1 files loaded (0 filtered) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00 0:00:00
+├── create_base_text_units
+├── create_base_extracted_entities
+├── create_summarized_entities
+├── create_base_entity_graph
+├── create_final_entities
+├── create_final_nodes
+├── create_final_communities
+├── join_text_units_to_entity_ids
+├── create_final_relationships
+├── join_text_units_to_relationship_ids
+├── create_final_community_reports
+├── create_final_text_units
+├── create_base_documents
+└── create_final_documents
+🚀 All workflows completed successfully.

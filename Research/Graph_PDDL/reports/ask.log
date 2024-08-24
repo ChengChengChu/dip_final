@@ -1,0 +1,75 @@
+(graphrag) (base) zhangzizhong@zhangzizhongdeMacBook-Air graphrag_cgi % python -m graphrag.query --root ./Graph_PDDL --method global "What are the top themes in the files?"
+
+
+INFO: Reading settings from Graph_PDDL/settings.yaml
+creating llm client with {'api_key': 'REDACTED,len=56', 'type': "openai_chat", 'model': 'gpt-4o-mini', 'max_tokens': 4000, 'temperature': 0.0, 'top_p': 1.0, 'n': 1, 'request_timeout': 180.0, 'api_base': None, 'api_version': None, 'organization': None, 'proxy': None, 'cognitive_services_endpoint': None, 'deployment_name': None, 'model_supports_json': True, 'tokens_per_minute': 0, 'requests_per_minute': 0, 'max_retries': 10, 'max_retry_wait': 10.0, 'sleep_on_rate_limit_recommendation': True, 'concurrent_requests': 25}
+
+SUCCESS: Global Search Response: ## Key Themes in the Dataset
+
+The analysis of the dataset reveals several prominent themes that are critical to understanding advancements in AI planning, particularly through the integration of PDDL (Planning Domain Definition Language) and graph transformation systems. Below are the key themes identified:
+
+### Integration of PDDL and Graph Transformation Systems
+
+A significant theme is the integration of PDDL with graph transformation systems, which enhances modeling and analysis capabilities in AI planning. This relationship is essential for developing effective problem-solving strategies across various applications [Data: Reports (11, 10, 12, 6, 9, +more)].
+
+### Role of GROOVE in Graph Transformations
+
+GROOVE emerges as a central tool for graph transformations, underscoring its importance in modeling and analyzing systems defined in PDDL. Its ability to translate PDDL actions into graph rules is vital for advancing methodologies in AI planning [Data: Reports (10, 11, 9, 5, 6, +more)].
+
+### Heuristic Exploration Algorithms
+
+The significance of heuristic exploration algorithms in AI planning is another critical theme. These algorithms rely on PDDL to optimize search processes, demonstrating practical applications in solving real-world planning problems [Data: Reports (11, 7, 1, 2, 6, +more)].
+
+### Contributions of Key Researchers
+
+The contributions of researchers, such as Edelkamp and Rensink, are highlighted as pivotal in advancing both theoretical and practical applications in the fields of PDDL and graph transformation systems. Their collaborative efforts are instrumental in pushing the boundaries of AI planning [Data: Reports (12, 11, 1, 0, 6, +more)].
+
+### Educational Value of Classic Problems
+
+Lastly, the exploration of classic problems, such as the Wumpus Problem and the Ferryman Problem, serves as educational tools in AI planning. These problems illustrate the complexities of navigation and decision-making in uncertain environments, providing valuable insights into the challenges faced in the field [Data: Reports (7, 1, 3, 9, 6, +more)].
+
+## Conclusion
+
+In summary, the dataset reveals a rich landscape of themes that are crucial for understanding the current state and future directions of AI planning. The integration of PDDL with graph transformation systems, the role of GROOVE, the importance of heuristic algorithms, contributions from key researchers, and the educational value of classic problems collectively shape the discourse in this domain. These insights may guide future research and application development in AI planning methodologies.
+----------------------------------------------------------------
+
+(graphrag) (base) zhangzizhong@zhangzizhongdeMacBook-Air graphrag_cgi % python -m graphrag.query --root ./Graph_PDDL --method local "What are the top themes in the files?"
+
+
+INFO: Reading settings from Graph_PDDL/settings.yaml
+
+INFO: Vector Store Args: {}
+[2024-08-14T03:06:47Z WARN  lance::dataset] No existing dataset at /Users/zhangzizhong/Documents/GitHub/graphrag_cgi/lancedb/entity_description_embeddings.lance, it will be created
+creating llm client with {'api_key': 'REDACTED,len=56', 'type': "openai_chat", 'model': 'gpt-4o-mini', 'max_tokens': 4000, 'temperature': 0.0, 'top_p': 1.0, 'n': 1, 'request_timeout': 180.0, 'api_base': None, 'api_version': None, 'organization': None, 'proxy': None, 'cognitive_services_endpoint': None, 'deployment_name': None, 'model_supports_json': True, 'tokens_per_minute': 0, 'requests_per_minute': 0, 'max_retries': 10, 'max_retry_wait': 10.0, 'sleep_on_rate_limit_recommendation': True, 'concurrent_requests': 25}
+creating embedding llm client with {'api_key': 'REDACTED,len=56', 'type': "openai_embedding", 'model': 'text-embedding-3-small', 'max_tokens': 4000, 'temperature': 0, 'top_p': 1, 'n': 1, 'request_timeout': 180.0, 'api_base': None, 'api_version': None, 'organization': None, 'proxy': None, 'cognitive_services_endpoint': None, 'deployment_name': None, 'model_supports_json': None, 'tokens_per_minute': 0, 'requests_per_minute': 0, 'max_retries': 10, 'max_retry_wait': 10.0, 'sleep_on_rate_limit_recommendation': True, 'concurrent_requests': 25}
+
+SUCCESS: Local Search Response: # Top Themes in PDDL and Graph Transformation Systems
+
+The documents provided focus on the interrelationship between the Planning Domain Definition Language (PDDL) and graph transformation systems, particularly through the use of tools like GROOVE. Here are the key themes identified:
+
+## 1. **PDDL as a Foundational Language in AI Planning**
+
+PDDL is established as a critical formal language for articulating planning problems within artificial intelligence. Developed in 1998, it standardizes the representation of various planning scenarios, making it essential for researchers and practitioners in the field. Its widespread adoption highlights its role in facilitating effective problem-solving strategies in AI applications [Data: Entities (1), Relationships (4, 5, 6, 10, 12, +more)].
+
+## 2. **Interrelationship Between PDDL and Graph Transformation Systems**
+
+The documents emphasize the close relationship between PDDL and graph transformation systems. PDDL descriptions can be translated into graph rules, enhancing the modeling of planning problems. This translation allows for a structured analysis of actions within a graphical context, showcasing the complementary nature of these frameworks in AI planning [Data: Relationships (11, 13, 3, 4, 5, +more)].
+
+## 3. **Role of GROOVE in Modeling and Analysis**
+
+GROOVE is highlighted as a versatile tool that models and analyzes systems defined in PDDL. It processes PDDL descriptions to create graph transformation systems, effectively integrating PDDL as a language for defining planning problems. The collaboration between PDDL and GROOVE is vital for advancing research and applications in AI planning methodologies [Data: Entities (57), Relationships (3, 11, 4, 5, 10, +more)].
+
+## 4. **Contributions of Key Researchers**
+
+The contributions of researchers such as Gerevini and Edelkamp are noted for their significant impact on the development of PDDL and its applications. Their work has been foundational in building translators that connect PDDL with graph transformation systems, enhancing the theoretical understanding of these concepts [Data: Entities (45, 5), Relationships (10, 5, 6, 4, 12, +more)].
+
+## 5. **Heuristic Exploration Algorithms**
+
+Heuristic exploration algorithms are discussed as traditional planning methods that utilize PDDL input to find solutions to planning problems. These algorithms are essential for optimizing the search process in AI planning, demonstrating the practical applications of PDDL in real-world scenarios [Data: Entities (30), Relationships (8, 1, 4, 5, 10, +more)].
+
+## Conclusion
+
+The themes identified in the documents reflect a comprehensive exploration of the relationship between PDDL and graph transformation systems, emphasizing their collaborative roles in enhancing AI planning methodologies. The integration of these frameworks, along with the contributions of key researchers, underscores the importance of continued exploration and development in this field.
+----------------------------------------------------------------
+
+

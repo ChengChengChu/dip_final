@@ -1,0 +1,2084 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d13" for="edge" attr.name="level" attr.type="long" />
+  <key id="d12" for="edge" attr.name="human_readable_id" attr.type="long" />
+  <key id="d11" for="edge" attr.name="id" attr.type="string" />
+  <key id="d10" for="edge" attr.name="source_id" attr.type="string" />
+  <key id="d9" for="edge" attr.name="description" attr.type="string" />
+  <key id="d8" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d7" for="node" attr.name="id" attr.type="string" />
+  <key id="d6" for="node" attr.name="human_readable_id" attr.type="long" />
+  <key id="d5" for="node" attr.name="degree" attr.type="long" />
+  <key id="d4" for="node" attr.name="level" attr.type="long" />
+  <key id="d3" for="node" attr.name="cluster" attr.type="string" />
+  <key id="d2" for="node" attr.name="source_id" attr.type="string" />
+  <key id="d1" for="node" attr.name="description" attr.type="string" />
+  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="A1&#31558;&#35352;">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">A1&#31558;&#35352; is a document discussing planning graphs for PDDL relaxing problems and heuristics for planning in PDDL.</data>
+      <data key="d2">82cf4c7c174acb518c35fedddc4c389f</data>
+      <data key="d3">11</data>
+      <data key="d4">2</data>
+      <data key="d5">1</data>
+      <data key="d6">0</data>
+      <data key="d7">b45241d70f0e43fca764df95b2b81f77</data>
+    </node>
+    <node id="PDDL">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">PDDL, which stands for Planning Domain Definition Language, is a formal language utilized in artificial intelligence for describing planning problems and domains. Developed in 1998, PDDL was created to standardize planning languages, allowing for a consistent way to express planning problems and actions. It serves as a crucial tool for AI planning, enabling the formal representation of various planning scenarios and domain definitions. Overall, PDDL is recognized as a key language in the field of AI for articulating planning challenges and their respective domains.</data>
+      <data key="d2">06e4657fd3359c4741a480652dae616c,0f3969a320ce2970f1e7d7bb56d14116,82cf4c7c174acb518c35fedddc4c389f,84dc5179e82b359101c3133840141db7,8a6ad025a7df9b5b0bfdc75058a12cfd,986cddee6d7f2326ba76a0b5022599ca,a33289b1683704fd78a07aac326d326c,bf7f32c29f5be7503d1c6a818e1086ac,d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d3">11</data>
+      <data key="d4">2</data>
+      <data key="d5">16</data>
+      <data key="d6">1</data>
+      <data key="d7">4119fd06010c494caa07f439b333f4c5</data>
+    </node>
+    <node id="PLANNING GRAPHS">
+      <data key="d0">EVENT</data>
+      <data key="d1">Planning graphs are used to estimate the number of steps required to reach a goal state from an initial state in planning problems.</data>
+      <data key="d2">82cf4c7c174acb518c35fedddc4c389f</data>
+      <data key="d5">3</data>
+      <data key="d6">2</data>
+      <data key="d7">d3835bf3dda84ead99deadbeac5d0d7d</data>
+    </node>
+    <node id="INITIAL STATE">
+      <data key="d0">EVENT</data>
+      <data key="d1">The initial state is the starting point in a planning problem from which actions are taken to reach a goal state.</data>
+      <data key="d2">82cf4c7c174acb518c35fedddc4c389f</data>
+      <data key="d5">2</data>
+      <data key="d6">3</data>
+      <data key="d7">077d2820ae1845bcbb1803379a3d1eae</data>
+    </node>
+    <node id="GOAL STATE">
+      <data key="d0">EVENT</data>
+      <data key="d1">The goal state is the desired outcome in a planning problem that needs to be achieved.</data>
+      <data key="d2">82cf4c7c174acb518c35fedddc4c389f</data>
+      <data key="d5">2</data>
+      <data key="d6">4</data>
+      <data key="d7">3671ea0dd4e84c1a9b02c5ab2c8f4bac</data>
+    </node>
+    <node id="GREEDY ALGORITHM">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">A greedy algorithm is a method for solving optimization problems by making the locally optimal choice at each stage.</data>
+      <data key="d2">82cf4c7c174acb518c35fedddc4c389f</data>
+      <data key="d3">11</data>
+      <data key="d4">2</data>
+      <data key="d5">1</data>
+      <data key="d6">5</data>
+      <data key="d7">19a7f254a5d64566ab5cc15472df02de</data>
+    </node>
+    <node id="MUTEX">
+      <data key="d0">EVENT</data>
+      <data key="d1">Mutex refers to actions or literals that cannot occur simultaneously in a planning graph. It signifies mutual exclusions in the Planning Graph, indicating pairs of actions or propositions that are unable to occur at the same time due to their conflicting effects.</data>
+      <data key="d2">82cf4c7c174acb518c35fedddc4c389f,face077b78475e973a88681b263d5aa8</data>
+      <data key="d5">3</data>
+      <data key="d6">6</data>
+      <data key="d7">e7ffaee9d31d4d3c96e04f911d0a8f9e</data>
+    </node>
+    <node id="RELAXATION">
+      <data key="d0">EVENT</data>
+      <data key="d1">Relaxation is the process of simplifying a problem by ignoring certain conditions to make it easier to solve.</data>
+      <data key="d2">82cf4c7c174acb518c35fedddc4c389f</data>
+      <data key="d5">1</data>
+      <data key="d6">7</data>
+      <data key="d7">f7e11b0e297a44a896dc67928368f600</data>
+    </node>
+    <node id="ADMISSIBLE HEURISTICS">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Admissible heuristics are strategies used in planning that guarantee to find the optimal solution without overestimating the cost.</data>
+      <data key="d2">82cf4c7c174acb518c35fedddc4c389f</data>
+      <data key="d5">1</data>
+      <data key="d6">8</data>
+      <data key="d7">1fd3fa8bb5a2408790042ab9573779ee</data>
+    </node>
+    <node id="SEARCH GRAPH">
+      <data key="d0">EVENT</data>
+      <data key="d1">A search graph is a representation of the states and actions in a planning problem, used to find paths to the goal state.</data>
+      <data key="d2">82cf4c7c174acb518c35fedddc4c389f</data>
+      <data key="d5">1</data>
+      <data key="d6">9</data>
+      <data key="d7">27f9fbe6ad8c4a8b9acee0d3596ed57c</data>
+    </node>
+    <node id="ACTION">
+      <data key="d0">EVENT</data>
+      <data key="d1">ACTION refers to the operations that an agent can perform within the context of the Wumpus game, which includes actions such as moving, taking, or shooting. In a broader sense, an action is defined as a step taken in a planning problem that facilitates a change in state from one condition to another. Specifically, an action represents a particular operation or rule that, when applied to a given state, results in a transition to a new state. Thus, ACTION encompasses both the specific operations in the Wumpus game and the general concept of actions as transformative steps in various planning scenarios.</data>
+      <data key="d2">82cf4c7c174acb518c35fedddc4c389f,ae1f0336c58e23a0ad86a060639755c9,bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d5">3</data>
+      <data key="d6">10</data>
+      <data key="d7">e1fd0e904a53409aada44442f23a51cb</data>
+    </node>
+    <node id="STATE">
+      <data key="d0">EVENT</data>
+      <data key="d1">A state is defined as a specific configuration of the variables in a planning problem at a given time. It represents a particular arrangement of objects and their relationships at a specific point in time during the testing process.</data>
+      <data key="d2">82cf4c7c174acb518c35fedddc4c389f,bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d5">3</data>
+      <data key="d6">11</data>
+      <data key="d7">de988724cfdf45cebfba3b13c43ceede</data>
+    </node>
+    <node id="FACTORED REPRESENTATION">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">82cf4c7c174acb518c35fedddc4c389f</data>
+      <data key="d3">11</data>
+      <data key="d4">2</data>
+      <data key="d5">1</data>
+      <data key="d6">12</data>
+      <data key="d7">96aad7cb4b7d40e9b7e13b94a67af206</data>
+    </node>
+    <node id="RONALD MEIJER">
+      <data key="d0">PERSON</data>
+      <data key="d1">Ronald Meijer is a researcher at the University of Twente, focusing on AI planning and graph transformations.</data>
+      <data key="d2">986cddee6d7f2326ba76a0b5022599ca</data>
+      <data key="d5">2</data>
+      <data key="d6">13</data>
+      <data key="d7">c9632a35146940c2a86167c7726d35e9</data>
+    </node>
+    <node id="UNIVERSITY OF TWENTE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The University of Twente is an educational institution located in Enschede, Netherlands. It is known for its research in artificial intelligence, particularly in the areas of AI planning and graph transformations. Additionally, the university is involved in the development and utilization of the GROOVE tool, which is associated with its research initiatives.</data>
+      <data key="d2">06e4657fd3359c4741a480652dae616c,986cddee6d7f2326ba76a0b5022599ca</data>
+      <data key="d5">4</data>
+      <data key="d6">14</data>
+      <data key="d7">9646481f66ce4fd2b08c2eddda42fc82</data>
+    </node>
+    <node id="GROOVE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">GROOVE is a comprehensive graph transformation system developed at the University of Twente, designed for modeling and solving problems, particularly in the realms of planning and graph-based problem solving. It serves as a versatile tool for modeling and analyzing systems, specifically focusing on the translation of PDDL (Planning Domain Definition Language) actions into graph rules. GROOVE functions as a graph-based model checking tool, enabling the analysis of various problems and solutions through graph transformations.
+
+The system features a built-in state space generator, which aids in the exploration of different states within the graph transformation framework. Additionally, GROOVE allows for the visualization and manipulation of graph transformation systems, making it user-friendly for those working with complex graph structures. It is an open-source tool that incorporates translators for both PDDL and graph systems, enhancing its utility in formal rule-based graph transformations. Overall, GROOVE is a powerful resource for researchers and practitioners engaged in graph transformation and planning tasks.</data>
+      <data key="d2">06e4657fd3359c4741a480652dae616c,0f3969a320ce2970f1e7d7bb56d14116,84dc5179e82b359101c3133840141db7,8a6ad025a7df9b5b0bfdc75058a12cfd,986cddee6d7f2326ba76a0b5022599ca,a33289b1683704fd78a07aac326d326c,bf7f32c29f5be7503d1c6a818e1086ac,d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">11</data>
+      <data key="d6">15</data>
+      <data key="d7">d91a266f766b4737a06b0fda588ba40b</data>
+    </node>
+    <node id="ENSCHEDE">
+      <data key="d0">GEO</data>
+      <data key="d1">Enschede is a city in the Netherlands, home to the University of Twente.</data>
+      <data key="d2">986cddee6d7f2326ba76a0b5022599ca</data>
+      <data key="d5">1</data>
+      <data key="d6">16</data>
+      <data key="d7">bc0e3f075a4c4ebbb7c7b152b65a5625</data>
+    </node>
+    <node id="17TH TWENTE STUDENT CONFERENCE ON IT">
+      <data key="d0">EVENT</data>
+      <data key="d1">The 17th Twente Student Conference on IT is an academic event held at the University of Twente, focusing on information technology topics.</data>
+      <data key="d2">986cddee6d7f2326ba76a0b5022599ca</data>
+      <data key="d5">2</data>
+      <data key="d6">17</data>
+      <data key="d7">254770028d7a4fa9877da4ba0ad5ad21</data>
+    </node>
+    <node id="LEVEL SUM HEURISTICS">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Level sum heuristics are techniques used in AI planning to estimate the cost of reaching goals based on the levels of actions in a planning graph.</data>
+      <data key="d2">986cddee6d7f2326ba76a0b5022599ca</data>
+      <data key="d5">1</data>
+      <data key="d6">18</data>
+      <data key="d7">4a67211867e5464ba45126315a122a8a</data>
+    </node>
+    <node id="AI PLANNING">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">AI planning is a field of artificial intelligence focused on finding optimal solutions to problems through the use of algorithms and heuristics.</data>
+      <data key="d2">986cddee6d7f2326ba76a0b5022599ca</data>
+      <data key="d5">2</data>
+      <data key="d6">19</data>
+      <data key="d7">04dbbb2283b845baaeac0eaf0c34c9da</data>
+    </node>
+    <node id="GRAPH TRANSFORMATIONS">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Graph transformations are techniques used to model and analyze changes in systems through the manipulation of graph structures.</data>
+      <data key="d2">986cddee6d7f2326ba76a0b5022599ca</data>
+      <data key="d5">1</data>
+      <data key="d6">20</data>
+      <data key="d7">1943f245ee4243bdbfbd2fd619ae824a</data>
+    </node>
+    <node id="STATE SPACE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">State space refers to the comprehensive set of all possible states that can be reached in a planning problem, particularly within the context of artificial intelligence (AI) planning. It encompasses various configurations of a system, where nodes symbolize individual states and edges illustrate the transitions between these states. The state space can be explored and analyzed using a variety of algorithms, allowing for the determination of potential outcomes resulting from different actions taken within the planning problem.</data>
+      <data key="d2">06e4657fd3359c4741a480652dae616c,8a6ad025a7df9b5b0bfdc75058a12cfd,986cddee6d7f2326ba76a0b5022599ca,a33289b1683704fd78a07aac326d326c</data>
+      <data key="d5">6</data>
+      <data key="d6">21</data>
+      <data key="d7">273daeec8cad41e6b3e450447db58ee7</data>
+    </node>
+    <node id="MACHINE-READABLE LANGUAGE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">A machine-readable language is a formal language that can be processed by computers, essential for AI planning systems.</data>
+      <data key="d2">986cddee6d7f2326ba76a0b5022599ca</data>
+      <data key="d5">0</data>
+      <data key="d6">22</data>
+      <data key="d7">e69dc259edb944ea9ea41264b9fcfe59</data>
+    </node>
+    <node id="PLANNING GRAPH">
+      <data key="d0" />
+      <data key="d1">The Planning Graph is a method utilized to enhance the complexity of classical planning approaches in artificial intelligence, facilitating more efficient solution searching. It serves as a structure that integrates the characteristics of the Reachability Graph with relaxations, thereby providing a more effective representation of states and actions in planning problems.</data>
+      <data key="d2">986cddee6d7f2326ba76a0b5022599ca,d1424b257022422187467b75dde41e8c,face077b78475e973a88681b263d5aa8</data>
+      <data key="d5">4</data>
+      <data key="d6">23</data>
+      <data key="d7">e2f5735c7d714423a2c4f61ca2644626</data>
+    </node>
+    <node id="EDELKAMP">
+      <data key="d0">PERSON</data>
+      <data key="d1">Edelkamp is a researcher known for exploring the possibilities of using PDDL (Planning Domain Definition Language) for model checking software. In addition to this, Edelkamp has made significant contributions to the understanding and development of graph transformation systems. Through these efforts, Edelkamp has advanced the field by integrating PDDL into model checking methodologies and enhancing the theoretical framework surrounding graph transformations.</data>
+      <data key="d2">0f3969a320ce2970f1e7d7bb56d14116,8a6ad025a7df9b5b0bfdc75058a12cfd</data>
+      <data key="d3">12</data>
+      <data key="d4">2</data>
+      <data key="d5">2</data>
+      <data key="d6">24</data>
+      <data key="d7">deece7e64b2a4628850d4bb6e394a9c3</data>
+    </node>
+    <node id="RENSINK">
+      <data key="d0">PERSON</data>
+      <data key="d1">Rensink is a researcher who suggested that graph transformation systems could be used to solve planning problems related to PDDL.</data>
+      <data key="d2">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d3">12</data>
+      <data key="d4">2</data>
+      <data key="d5">2</data>
+      <data key="d6">25</data>
+      <data key="d7">e657b5121ff8456b9a610cfaead8e0cb</data>
+    </node>
+    <node id="STRIPS">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">STRIPS is a planning language that uses preconditions and effects to describe possible actions, serving as an inspiration for PDDL.</data>
+      <data key="d2">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d3">11</data>
+      <data key="d4">2</data>
+      <data key="d5">1</data>
+      <data key="d6">26</data>
+      <data key="d7">bf4e255cdac94ccc83a56435a5e4b075</data>
+    </node>
+    <node id="GRAPH TRANSFORMATION SYSTEMS">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Graph transformation systems are computational models designed to manipulate graphs based on specified rules. They are commonly utilized in planning and problem-solving contexts, as well as in modeling both software and hardware systems. By applying formal rules, these systems facilitate the transformation of graphs, enabling a structured approach to various computational tasks.</data>
+      <data key="d2">0f3969a320ce2970f1e7d7bb56d14116,a33289b1683704fd78a07aac326d326c</data>
+      <data key="d5">3</data>
+      <data key="d6">27</data>
+      <data key="d7">3b040bcc19f14e04880ae52881a89c1c</data>
+    </node>
+    <node id="GRAPH">
+      <data key="d0">EVENT</data>
+      <data key="d1">A graph is a mathematical representation that consists of nodes and edges, utilized to model relationships and transformations. In the context of the Wumpus problem, the graph serves as a structured visual representation of data, illustrating the relationships and properties of its nodes and edges. This dual role highlights the graph's importance in both theoretical mathematics and practical applications in problem-solving scenarios.</data>
+      <data key="d2">06e4657fd3359c4741a480652dae616c,0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d5">1</data>
+      <data key="d6">28</data>
+      <data key="d7">3d6b216c14354332b1bf1927ba168986</data>
+    </node>
+    <node id="MODEL CHECKING">
+      <data key="d0">EVENT</data>
+      <data key="d1">Model checking is a method used in computer science for verifying the correctness of systems, which was explored in relation to PDDL by Edelkamp.</data>
+      <data key="d2">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d5">1</data>
+      <data key="d6">29</data>
+      <data key="d7">1c109cfdc370463eb6d537e5b7b382fb</data>
+    </node>
+    <node id="HEURISTIC EXPLORATION ALGORITHMS">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Heuristic exploration algorithms are traditional planning methods that rely on PDDL input to find solutions to planning problems.</data>
+      <data key="d2">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d3">11</data>
+      <data key="d4">2</data>
+      <data key="d5">1</data>
+      <data key="d6">30</data>
+      <data key="d7">3d0dcbc8971b415ea18065edc4d8c8ef</data>
+    </node>
+    <node id="TRANSLATION">
+      <data key="d0">EVENT</data>
+      <data key="d1">Translation refers to the process of converting between PDDL and graph representations, which is a key focus of the paper.</data>
+      <data key="d2">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d5">4</data>
+      <data key="d6">31</data>
+      <data key="d7">68105770b523412388424d984e711917</data>
+    </node>
+    <node id="GRAPHS">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Graphs are mathematical structures used to model pairwise relations between objects, and are central to the discussions in the paper.</data>
+      <data key="d2">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d5">1</data>
+      <data key="d6">32</data>
+      <data key="d7">85c79fd84f5e4f918471c386852204c5</data>
+    </node>
+    <node id="SECTION 5">
+      <data key="d0">EVENT</data>
+      <data key="d1">Section 5 of the paper discusses the syntax and examples of PDDL, providing foundational knowledge for understanding the language.</data>
+      <data key="d2">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d3">11</data>
+      <data key="d4">2</data>
+      <data key="d5">1</data>
+      <data key="d6">33</data>
+      <data key="d7">eae4259b19a741ab9f9f6af18c4a0470</data>
+    </node>
+    <node id="SECTION 6">
+      <data key="d0">EVENT</data>
+      <data key="d1">Section 6 describes the translation process from PDDL to graphs, detailing the methodology used in the research.</data>
+      <data key="d2">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d5">1</data>
+      <data key="d6">34</data>
+      <data key="d7">3138f39f2bcd43a69e0697cd3b05bc4d</data>
+    </node>
+    <node id="SECTION 7">
+      <data key="d0">EVENT</data>
+      <data key="d1">Section 7 outlines the translation process from graphs back to PDDL, completing the cycle of conversion discussed in the paper.</data>
+      <data key="d2">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d5">1</data>
+      <data key="d6">35</data>
+      <data key="d7">dde131ab575d44dbb55289a6972be18f</data>
+    </node>
+    <node id="SECTION 8">
+      <data key="d0">EVENT</data>
+      <data key="d1">Section 8 contains the conclusion of the paper, reflecting on the contributions and future work related to PDDL and graph transformations.</data>
+      <data key="d2">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d5">1</data>
+      <data key="d6">36</data>
+      <data key="d7">de9e343f2e334d88a8ac7f8813a915e5</data>
+    </node>
+    <node id="PLANNING DOMAIN DEFINITION LANGUAGE">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d5">1</data>
+      <data key="d6">37</data>
+      <data key="d7">e2bf260115514fb3b252fd879fb3e7be</data>
+    </node>
+    <node id="WUMPUS WORLD">
+      <data key="d0">EVENT</data>
+      <data key="d1">Wumpus World is a classic problem in AI used to illustrate planning systems, where an agent must navigate a maze, defeat a creature, and collect treasure.</data>
+      <data key="d2">8a6ad025a7df9b5b0bfdc75058a12cfd</data>
+      <data key="d5">0</data>
+      <data key="d6">38</data>
+      <data key="d7">b462b94ce47a4b8c8fffa33f7242acec</data>
+    </node>
+    <node id="AGENT">
+      <data key="d0">PERSON</data>
+      <data key="d1">The agent in the Wumpus World is a character that navigates a maze-like environment, specifically designed for the Wumpus Problem. This character is controlled by the player and is responsible for making decisions and interacting with the grid to achieve various goals. The primary objectives of the agent include defeating the Wumpus, collecting treasure, particularly gold, and avoiding various dangers that may arise during its exploration of the maze. Overall, the agent plays a crucial role in the gameplay, combining strategic navigation with the need to overcome challenges within the Wumpus game.</data>
+      <data key="d2">8a6ad025a7df9b5b0bfdc75058a12cfd,a33289b1683704fd78a07aac326d326c,ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d5">9</data>
+      <data key="d6">39</data>
+      <data key="d7">17ed1d92075643579a712cc6c29e8ddb</data>
+    </node>
+    <node id="TREASURE">
+      <data key="d0">EVENT</data>
+      <data key="d1">The treasure in Wumpus World is the goal of the agent, which it must collect after defeating the Wumpus.</data>
+      <data key="d2">8a6ad025a7df9b5b0bfdc75058a12cfd</data>
+      <data key="d5">1</data>
+      <data key="d6">40</data>
+      <data key="d7">3ce7c210a21b4deebad7cc9308148d86</data>
+    </node>
+    <node id="WUMPUS">
+      <data key="d0">PERSON</data>
+      <data key="d1">The Wumpus is a fictional creature featured in the Wumpus World game, where players must navigate through a grid of rooms. In this game, the primary objective is to defeat the Wumpus in order to collect treasure. Players must avoid the Wumpus while exploring the environment, as encountering it poses a significant threat.</data>
+      <data key="d2">8a6ad025a7df9b5b0bfdc75058a12cfd,ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d5">3</data>
+      <data key="d6">41</data>
+      <data key="d7">d64ed762ea924caa95c8d06f072a9a96</data>
+    </node>
+    <node id="HEURISTIC SEARCH">
+      <data key="d0">EVENT</data>
+      <data key="d1">Heuristic search is a method used in AI planning to efficiently explore the state space of problems, improving performance in finding solutions.</data>
+      <data key="d2">8a6ad025a7df9b5b0bfdc75058a12cfd</data>
+      <data key="d5">2</data>
+      <data key="d6">42</data>
+      <data key="d7">adf4ee3fbe9b4d0381044838c4f889c8</data>
+    </node>
+    <node id="HEGEDUS">
+      <data key="d0">PERSON</data>
+      <data key="d1">Hegedus is a researcher who described frameworks for exploring the state space of graph transformation systems using heuristic search.</data>
+      <data key="d2">8a6ad025a7df9b5b0bfdc75058a12cfd</data>
+      <data key="d5">1</data>
+      <data key="d6">43</data>
+      <data key="d7">32ee140946e5461f9275db664dc541a5</data>
+    </node>
+    <node id="ESTLER">
+      <data key="d0">PERSON</data>
+      <data key="d1">Estler is a researcher who built a planning framework that utilizes heuristic search algorithms for graph-based systems.</data>
+      <data key="d2">8a6ad025a7df9b5b0bfdc75058a12cfd</data>
+      <data key="d5">1</data>
+      <data key="d6">44</data>
+      <data key="d7">c160b9cb27d6408ba6ab20214a2f3f81</data>
+    </node>
+    <node id="GEREVINI">
+      <data key="d0">PERSON</data>
+      <data key="d1">Gerevini is a researcher who described the PDDL language with a BNF grammar, contributing to the development of translators for planning systems.</data>
+      <data key="d2">8a6ad025a7df9b5b0bfdc75058a12cfd</data>
+      <data key="d3">11</data>
+      <data key="d4">2</data>
+      <data key="d5">1</data>
+      <data key="d6">45</data>
+      <data key="d7">23527cd679ff4d5a988d52e7cd056078</data>
+    </node>
+    <node id="SNIPPE">
+      <data key="d0">PERSON</data>
+      <data key="d1">Snippe is a researcher who investigated the use of A* search in finding paths in graph transformation systems.</data>
+      <data key="d2">8a6ad025a7df9b5b0bfdc75058a12cfd</data>
+      <data key="d5">1</data>
+      <data key="d6">46</data>
+      <data key="d7">f1c6eed066f24cbdb376b910fce29ed4</data>
+    </node>
+    <node id="GOLD">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Gold is a valuable object in the Wumpus game that the agent aims to collect.</data>
+      <data key="d2">ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d5">2</data>
+      <data key="d6">47</data>
+      <data key="d7">83a6cb03df6b41d8ad6ee5f6fef5f024</data>
+    </node>
+    <node id="ARROW">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The arrow is a weapon in the Wumpus game that the agent can use to defeat the Wumpus.</data>
+      <data key="d2">ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d5">2</data>
+      <data key="d6">48</data>
+      <data key="d7">147c038aef3e4422acbbc5f7938c4ab8</data>
+    </node>
+    <node id="PIT">
+      <data key="d0">EVENT</data>
+      <data key="d1">A pit is a hazard in the Wumpus game that can cause the agent to fall and lose the game.</data>
+      <data key="d2">ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d5">3</data>
+      <data key="d6">49</data>
+      <data key="d7">b7702b90c7f24190b864e8c6e64612a5</data>
+    </node>
+    <node id="SQUARE">
+      <data key="d0">GEO</data>
+      <data key="d1">Squares are the individual tiles in the Wumpus game grid where the agent can move, and various objects can be located.</data>
+      <data key="d2">ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d5">0</data>
+      <data key="d6">50</data>
+      <data key="d7">de6fa24480894518ab3cbcb66f739266</data>
+    </node>
+    <node id="PREDICATE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Predicates are logical statements that define the properties and relationships of objects in the Wumpus game domain.</data>
+      <data key="d2">ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d5">1</data>
+      <data key="d6">51</data>
+      <data key="d7">6fae5ee1a831468aa585a1ea09095998</data>
+    </node>
+    <node id="PRECONDITION">
+      <data key="d0">EVENT</data>
+      <data key="d1">A precondition is a requirement that must be fulfilled before an action can be executed, particularly in the context of the testing process. In the realm of the Wumpus game, preconditions refer to the specific conditions that must be satisfied for an action to take place. Thus, preconditions serve as essential criteria that ensure the proper execution of actions in various scenarios, including both testing environments and game mechanics.</data>
+      <data key="d2">ae1f0336c58e23a0ad86a060639755c9,bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d5">2</data>
+      <data key="d6">52</data>
+      <data key="d7">ef32c4b208d041cc856f6837915dc1b0</data>
+    </node>
+    <node id="EFFECT">
+      <data key="d0">EVENT</data>
+      <data key="d1">The term "EFFECT" refers to the outcome or result that arises from applying an action to a state within a testing process. In the context of the Wumpus game, effects specifically denote the outcomes that result from performing actions within the game environment. Thus, effects can be understood as the consequences of actions taken, whether in a general testing scenario or in the specific gameplay of the Wumpus game.</data>
+      <data key="d2">ae1f0336c58e23a0ad86a060639755c9,bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d5">2</data>
+      <data key="d6">53</data>
+      <data key="d7">07b2425216bd4f0aa4e079827cb48ef5</data>
+    </node>
+    <node id="OBJECT">
+      <data key="d0">GEO</data>
+      <data key="d1">Objects are the various items and entities present in the Wumpus game, such as the agent, gold, arrow, and Wumpus.</data>
+      <data key="d2">ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d5">5</data>
+      <data key="d6">54</data>
+      <data key="d7">2670deebfa3f4d69bb82c28ab250a209</data>
+    </node>
+    <node id="DOMAIN">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d5">1</data>
+      <data key="d6">55</data>
+      <data key="d7">404309e89a5241d6bff42c05a45df206</data>
+    </node>
+    <node id="WUMPUS PROBLEM">
+      <data key="d0">EVENT</data>
+      <data key="d1">The Wumpus Problem is a classic problem in artificial intelligence and graph theory, frequently utilized to demonstrate the challenges associated with navigation and decision-making in uncertain environments. It involves an agent navigating a grid in search of treasure while avoiding a creature known as the Wumpus. This problem serves as a significant example in the field of artificial intelligence, particularly for testing planning algorithms and graph transformations.</data>
+      <data key="d2">06e4657fd3359c4741a480652dae616c,84dc5179e82b359101c3133840141db7,a33289b1683704fd78a07aac326d326c</data>
+      <data key="d5">3</data>
+      <data key="d6">56</data>
+      <data key="d7">b785a9025069417f94950ad231bb1441</data>
+    </node>
+    <node id="GRAPH TRANSFORMATION SYSTEM">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The GRAPH TRANSFORMATION SYSTEM is a computational model that utilizes graphs to represent and manipulate data structures and processes. It serves as a framework for modeling and analyzing the behavior of systems by applying graph rules. This system enables the transformation of graphs, facilitating the exploration of complex relationships and interactions within data.</data>
+      <data key="d2">06e4657fd3359c4741a480652dae616c,84dc5179e82b359101c3133840141db7,bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d3">11</data>
+      <data key="d4">2</data>
+      <data key="d5">2</data>
+      <data key="d6">57</data>
+      <data key="d7">3b6cd96a27304614850709aba1c9598b</data>
+    </node>
+    <node id="AUGUR">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">AUGUR is another tool mentioned in relation to graph transformation, indicating its relevance in the same domain as GROOVE.</data>
+      <data key="d2">06e4657fd3359c4741a480652dae616c</data>
+      <data key="d5">0</data>
+      <data key="d6">58</data>
+      <data key="d7">d54956b79dd147f894b67a8b97dcbef0</data>
+    </node>
+    <node id="NODE">
+      <data key="d0">EVENT</data>
+      <data key="d1">Nodes are the fundamental units in a graph, representing objects or states in the context of graph transformation systems.</data>
+      <data key="d2">06e4657fd3359c4741a480652dae616c</data>
+      <data key="d5">0</data>
+      <data key="d6">59</data>
+      <data key="d7">958beecdb5bb4060948415ffd75d2b03</data>
+    </node>
+    <node id="EDGE">
+      <data key="d0">EVENT</data>
+      <data key="d1">Edges are the connections between nodes in a graph, representing relationships or transitions in graph transformation systems.</data>
+      <data key="d2">06e4657fd3359c4741a480652dae616c</data>
+      <data key="d5">0</data>
+      <data key="d6">60</data>
+      <data key="d7">b999ed77e19e4f85b7f1ae79af5c002a</data>
+    </node>
+    <node id="RULE">
+      <data key="d0">EVENT</data>
+      <data key="d1">Rules in the context of GROOVE define how nodes and edges can be transformed or manipulated within the graph.</data>
+      <data key="d2">06e4657fd3359c4741a480652dae616c</data>
+      <data key="d5">0</data>
+      <data key="d6">61</data>
+      <data key="d7">48c0c4d72da74ff5bb926fa0c856d1a7</data>
+    </node>
+    <node id="SELF-EDGE">
+      <data key="d0">EVENT</data>
+      <data key="d1">A self-edge is a specific type of edge that connects a node to itself, used to represent properties of that node in graph theory.</data>
+      <data key="d2">06e4657fd3359c4741a480652dae616c</data>
+      <data key="d5">0</data>
+      <data key="d6">62</data>
+      <data key="d7">4f3c97517f794ebfb49c4c6315f9cf23</data>
+    </node>
+    <node id="PRECONDITIONS">
+      <data key="d0">EVENT</data>
+      <data key="d1">Preconditions are specific conditions that must be met for a rule to be applied in the context of graph transformation. Additionally, they are essential requirements that must be satisfied before an action can be executed in a planning scenario. In the planning process, preconditions serve as the necessary criteria that determine the applicability of actions, ensuring that all relevant conditions are fulfilled prior to their execution.</data>
+      <data key="d2">06e4657fd3359c4741a480652dae616c,d1424b257022422187467b75dde41e8c,face077b78475e973a88681b263d5aa8</data>
+      <data key="d5">3</data>
+      <data key="d6">63</data>
+      <data key="d7">1745a2485a9443bab76587ad650e9be0</data>
+    </node>
+    <node id="EFFECTS">
+      <data key="d0">EVENT</data>
+      <data key="d1">Effects are the outcomes or changes that result from applying a rule in a graph transformation system.</data>
+      <data key="d2">06e4657fd3359c4741a480652dae616c</data>
+      <data key="d5">0</data>
+      <data key="d6">64</data>
+      <data key="d7">32e6ccab20d94029811127dbbe424c64</data>
+    </node>
+    <node id="DEADLOCK-STATES">
+      <data key="d0">EVENT</data>
+      <data key="d1">Deadlock-states refer to configurations in the state space where no further actions can be taken, indicating a halt in progress.</data>
+      <data key="d2">06e4657fd3359c4741a480652dae616c</data>
+      <data key="d5">0</data>
+      <data key="d6">65</data>
+      <data key="d7">94a964c6992945ebb3833dfdfdc8d655</data>
+    </node>
+    <node id="QUANTIFIER NODE">
+      <data key="d0">EVENT</data>
+      <data key="d1">The QUANTIFIER NODE is a component utilized in GROOVE, a tool for graph transformation. Its primary function is to manage the application of rules that involve existential quantifiers. This ensures that the matching of edges occurs independently, facilitating more effective graph transformations.</data>
+      <data key="d2">06e4657fd3359c4741a480652dae616c,bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d5">1</data>
+      <data key="d6">66</data>
+      <data key="d7">1eb829d0ace042089f0746f78729696c</data>
+    </node>
+    <node id="A">
+      <data key="d0">PERSON</data>
+      <data key="d1">A is a placeholder object used in the context of the tests to represent one of the entities involved in the actions being tested.</data>
+      <data key="d2">bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d5">1</data>
+      <data key="d6">67</data>
+      <data key="d7">015e7b58d1a14b44beab3bbc9f912c18</data>
+    </node>
+    <node id="B">
+      <data key="d0">PERSON</data>
+      <data key="d1">B is another placeholder object used in the context of the tests to represent the second entity involved in the actions being tested.</data>
+      <data key="d2">bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d5">1</data>
+      <data key="d6">68</data>
+      <data key="d7">26f88ab3e2e04c33a459ad6270ade565</data>
+    </node>
+    <node id="TEST CASES">
+      <data key="d0">EVENT</data>
+      <data key="d1">Test cases are specific scenarios designed to validate the correctness of the translation from PDDL to graph rules.</data>
+      <data key="d2">bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d5">1</data>
+      <data key="d6">69</data>
+      <data key="d7">babe97e1d9784cffa1c85abc1e588126</data>
+    </node>
+    <node id="ERASER RULE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">An eraser rule is a specific type of rule in the graph transformation system that references a level indicator to modify or remove elements in the graph.</data>
+      <data key="d2">bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d5">2</data>
+      <data key="d6">70</data>
+      <data key="d7">1033a18c45aa4584b2aef6ab96890351</data>
+    </node>
+    <node id="LEVEL INDICATOR">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">A level indicator is a marker used in the graph transformation system to denote the level of abstraction or specificity of a quantifier node.</data>
+      <data key="d2">bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d5">1</data>
+      <data key="d6">71</data>
+      <data key="d7">c9b8ce91fc2945b4907fe35519339cac</data>
+    </node>
+    <node id="ATOMIC ACTION">
+      <data key="d0">EVENT</data>
+      <data key="d1">An atomic action is a fundamental operation that can be applied to a state in the testing process, resulting in a change of state.</data>
+      <data key="d2">bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d5">2</data>
+      <data key="d6">72</data>
+      <data key="d7">fa3c4204421c48609e52c8de2da4c654</data>
+    </node>
+    <node id="FERRYMEN PROBLEM">
+      <data key="d0">EVENT</data>
+      <data key="d1">The Ferryman Problem is a classic puzzle that serves as an illustrative example in the context of graph transformations and translations. In this well-known puzzle, a ferryman is tasked with transporting a group of items across a river. The challenge lies in ensuring that certain items are not left alone together during the crossing, which adds a layer of complexity to the problem.</data>
+      <data key="d2">84dc5179e82b359101c3133840141db7,a33289b1683704fd78a07aac326d326c</data>
+      <data key="d5">2</data>
+      <data key="d6">73</data>
+      <data key="d7">53af055f068244d0ac861b2e89376495</data>
+    </node>
+    <node id="COMPILER">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The compiler is a tool designed to read PDDL-files and convert them into a format suitable for graph-based problem solving in GROOVE.</data>
+      <data key="d2">a33289b1683704fd78a07aac326d326c</data>
+      <data key="d5">1</data>
+      <data key="d6">74</data>
+      <data key="d7">c03ab3ce8cb74ad2a03b94723bfab3c7</data>
+    </node>
+    <node id="TRANSLATOR">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The translator is a tool or system designed to facilitate the conversion between graph representations and PDDL (Planning Domain Definition Language) descriptions. It serves as a crucial component that enables the transformation of graph transformation systems into PDDL descriptions and allows for the reverse process as well. This functionality is essential for integrating different representations of data and enhancing the interoperability of systems that utilize these formats.</data>
+      <data key="d2">84dc5179e82b359101c3133840141db7,a33289b1683704fd78a07aac326d326c</data>
+      <data key="d5">2</data>
+      <data key="d6">75</data>
+      <data key="d7">ed6d2eee9d7b4f5db466b1f6404d31cc</data>
+    </node>
+    <node id="END STATES">
+      <data key="d0">EVENT</data>
+      <data key="d1">End states are the final configurations reached in a planning problem after all actions have been executed, representing the outcome of the planning process.</data>
+      <data key="d2">a33289b1683704fd78a07aac326d326c</data>
+      <data key="d5">1</data>
+      <data key="d6">76</data>
+      <data key="d7">fc01e9baa80e417c9206f941bb279407</data>
+    </node>
+    <node id="AGENT MOVEMENT">
+      <data key="d0">EVENT</data>
+      <data key="d1">Agent movement refers to the actions taken by the agent in the Wumpus Problem to navigate the grid and interact with the environment.</data>
+      <data key="d2">a33289b1683704fd78a07aac326d326c</data>
+      <data key="d5">1</data>
+      <data key="d6">77</data>
+      <data key="d7">56d0e5ebe79e4814bd1463cf6ca21394</data>
+    </node>
+    <node id="PDDL-FILES">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">a33289b1683704fd78a07aac326d326c</data>
+      <data key="d5">1</data>
+      <data key="d6">78</data>
+      <data key="d7">7c49f2710e8b4d3b8dc9310834406ea5</data>
+    </node>
+    <node id="RONALD M.">
+      <data key="d0">PERSON</data>
+      <data key="d1">Ronald M. is the author of the paper and is associated with the development of the PDDL-GROOVE translators.</data>
+      <data key="d2">84dc5179e82b359101c3133840141db7</data>
+      <data key="d5">1</data>
+      <data key="d6">79</data>
+      <data key="d7">c6d1e4f56c2843e89cf0b91c10bb6de2</data>
+    </node>
+    <node id="APPENDIX C">
+      <data key="d0">EVENT</data>
+      <data key="d1">Appendix C contains details about the Ferryman Problem and its application in the context of the paper.</data>
+      <data key="d2">84dc5179e82b359101c3133840141db7</data>
+      <data key="d5">1</data>
+      <data key="d6">80</data>
+      <data key="d7">0adb2d9941f34ef7b2f7743cc6225844</data>
+    </node>
+    <node id="APPENDIX D">
+      <data key="d0">EVENT</data>
+      <data key="d1">Appendix D includes parts of the generated PDDL files referenced in the paper.</data>
+      <data key="d2">84dc5179e82b359101c3133840141db7</data>
+      <data key="d3">11</data>
+      <data key="d4">2</data>
+      <data key="d5">1</data>
+      <data key="d6">81</data>
+      <data key="d7">6b02373137fd438ba96af28f735cdbdb</data>
+    </node>
+    <node id="EXISTENTIAL QUANTIFIERS">
+      <data key="d0">EVENT</data>
+      <data key="d1">Existential quantifiers are logical constructs used in the context of graph transformations and PDDL to express the existence of certain elements.</data>
+      <data key="d2">84dc5179e82b359101c3133840141db7</data>
+      <data key="d5">1</data>
+      <data key="d6">82</data>
+      <data key="d7">36a4fcd8efc144e6b8af9a1c7ab8b2ce</data>
+    </node>
+    <node id="OBJECT CREATION AND DELETION">
+      <data key="d0">EVENT</data>
+      <data key="d1">Object creation and deletion refer to operations that are not supported in PDDL, impacting the translation from graphs to PDDL.</data>
+      <data key="d2">84dc5179e82b359101c3133840141db7</data>
+      <data key="d5">1</data>
+      <data key="d6">83</data>
+      <data key="d7">fbeef791d19b413a9c93c6608286ab63</data>
+    </node>
+    <node id="PDDL CODE">
+      <data key="d0">EVENT</data>
+      <data key="d1">PDDL code refers to the formal descriptions written in PDDL that define planning problems and their solutions.</data>
+      <data key="d2">84dc5179e82b359101c3133840141db7</data>
+      <data key="d5">0</data>
+      <data key="d6">84</data>
+      <data key="d7">d2b629c0396f4180a03e16ddf3818589</data>
+    </node>
+    <node id="VALIDATION AND TESTING">
+      <data key="d0">EVENT</data>
+      <data key="d1">Validation and testing are processes described in the paper to ensure the correctness of translations between PDDL and graph systems.</data>
+      <data key="d2">84dc5179e82b359101c3133840141db7</data>
+      <data key="d5">1</data>
+      <data key="d6">85</data>
+      <data key="d7">6102fc6619ed422ebc42588bfa97355d</data>
+    </node>
+    <node id="A. GEREVINI">
+      <data key="d0">PERSON</data>
+      <data key="d1">A. Gerevini is an author of a technical report on BNF description of PDDL3.0.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">1</data>
+      <data key="d6">86</data>
+      <data key="d7">8d141c0b80f74b79a05eed7fe161fe49</data>
+    </node>
+    <node id="D. LONG">
+      <data key="d0">PERSON</data>
+      <data key="d1">D. Long is an author of a technical report on BNF description of PDDL3.0.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">1</data>
+      <data key="d6">87</data>
+      <data key="d7">e22d1d1cd8d14f12b81828d940f40d70</data>
+    </node>
+    <node id="M. GHALLAB">
+      <data key="d0">PERSON</data>
+      <data key="d1">M. Ghallab is an author of the paper on PDDL, the planning domain definition language.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">2</data>
+      <data key="d6">88</data>
+      <data key="d7">9ab48505fb1b487babd0d1f6d3a3f980</data>
+    </node>
+    <node id="A. HOWE">
+      <data key="d0">PERSON</data>
+      <data key="d1">A. Howe is an author of the paper on PDDL, the planning domain definition language.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">1</data>
+      <data key="d6">89</data>
+      <data key="d7">148fffeb994541b2b4b6dcefda7001a8</data>
+    </node>
+    <node id="D. CHRISTIANSON">
+      <data key="d0">PERSON</data>
+      <data key="d1">D. Christianson is an author of the paper on PDDL, the planning domain definition language.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">1</data>
+      <data key="d6">90</data>
+      <data key="d7">89c08e793298442686292454a1abff31</data>
+    </node>
+    <node id="D. MCDERMOTT">
+      <data key="d0">PERSON</data>
+      <data key="d1">D. McDermott is an author of the paper on PDDL, the planning domain definition language.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">1</data>
+      <data key="d6">91</data>
+      <data key="d7">0467928aa65e4a4fba62bdb1467e3a54</data>
+    </node>
+    <node id="A. RAM">
+      <data key="d0">PERSON</data>
+      <data key="d1">A. Ram is an author of the paper on PDDL, the planning domain definition language.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">1</data>
+      <data key="d6">92</data>
+      <data key="d7">43c3390303c6476cb65f584e37c3e81c</data>
+    </node>
+    <node id="M. VELOSO">
+      <data key="d0">PERSON</data>
+      <data key="d1">M. Veloso is an author of the paper on PDDL, the planning domain definition language.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">1</data>
+      <data key="d6">93</data>
+      <data key="d7">fa14b16c17e3417dba5a4b473ea5b18d</data>
+    </node>
+    <node id="D. WELD">
+      <data key="d0">PERSON</data>
+      <data key="d1">D. Weld is an author of the paper on PDDL, the planning domain definition language.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">1</data>
+      <data key="d6">94</data>
+      <data key="d7">7cc3356d38de4328a51a5cbcb187dac3</data>
+    </node>
+    <node id="D. WILKINS">
+      <data key="d0">PERSON</data>
+      <data key="d1">D. Wilkins is an author of the paper on PDDL, the planning domain definition language.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">1</data>
+      <data key="d6">95</data>
+      <data key="d7">bef16fb5fd7344cca5e295b13ef3e0cd</data>
+    </node>
+    <node id="A. H. GHAMARIAN">
+      <data key="d0">PERSON</data>
+      <data key="d1">A. H. Ghamarian is an author of a paper on modeling and analysis using GROOVE.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">2</data>
+      <data key="d6">96</data>
+      <data key="d7">bb9e01bc171d4326a29afda59ece8d17</data>
+    </node>
+    <node id="M. J. DE MOL">
+      <data key="d0">PERSON</data>
+      <data key="d1">M. J. de Mol is an author of a paper on modeling and analysis using GROOVE.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">1</data>
+      <data key="d6">97</data>
+      <data key="d7">3c063eea52e94164b70c99431ea30bae</data>
+    </node>
+    <node id="A. RENSINK">
+      <data key="d0">PERSON</data>
+      <data key="d1">A. Rensink is an author of a paper on modeling and analysis using GROOVE.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">1</data>
+      <data key="d6">98</data>
+      <data key="d7">252cc8452bfc4c2aa58cab68d8b61879</data>
+    </node>
+    <node id="E. ZAMBON">
+      <data key="d0">PERSON</data>
+      <data key="d1">E. Zambon is an author of a paper on modeling and analysis using GROOVE.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">1</data>
+      <data key="d6">99</data>
+      <data key="d7">7e2c84548fb94ee395ba8588d8f2a006</data>
+    </node>
+    <node id="M. V. ZIMAKOVA">
+      <data key="d0">PERSON</data>
+      <data key="d1">M. V. Zimakova is an author of a paper on modeling and analysis using GROOVE.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">1</data>
+      <data key="d6">100</data>
+      <data key="d7">f034618dde7948beb6dab30176d0fc87</data>
+    </node>
+    <node id="R. HECKEL">
+      <data key="d0">PERSON</data>
+      <data key="d1">R. Heckel is an author of a paper on graph transformation.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">1</data>
+      <data key="d6">101</data>
+      <data key="d7">5c41f96be13e49dba649454297834546</data>
+    </node>
+    <node id="T. MURATA">
+      <data key="d0">PERSON</data>
+      <data key="d1">T. Murata is an author of a paper on Petri nets and their applications.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">2</data>
+      <data key="d6">102</data>
+      <data key="d7">7ea4afbf8a264f29af29950ce98105ba</data>
+    </node>
+    <node id="E. PEDNAULT">
+      <data key="d0">PERSON</data>
+      <data key="d1">E. Pednault is an author of a paper on ADL, exploring the middle ground between STRIPS and the situation calculus.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">2</data>
+      <data key="d6">103</data>
+      <data key="d7">91ff849d12b24574b0691dbddf44968b</data>
+    </node>
+    <node id="E. SNIPPE">
+      <data key="d0">PERSON</data>
+      <data key="d1">E. Snippe is an author of a paper on using heuristic search to solve planning problems in GROOVE.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">1</data>
+      <data key="d6">104</data>
+      <data key="d7">d73c1f2fb3094d8dace42ad2a76e9a52</data>
+    </node>
+    <node id="AUTOMATED SOFTWARE ENGINEERING (ASE)">
+      <data key="d0">EVENT</data>
+      <data key="d1">The 26th IEEE/ACM International Conference on Automated Software Engineering held in 2011.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">2</data>
+      <data key="d6">105</data>
+      <data key="d7">cdc8901e668749889bd49bebdc4ff1f6</data>
+    </node>
+    <node id="FIRST INTERNATIONAL CONFERENCE ON PRINCIPLES OF KNOWLEDGE REPRESENTATION AND REASONING">
+      <data key="d0">EVENT</data>
+      <data key="d1">The first international conference focused on principles of knowledge representation and reasoning.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">2</data>
+      <data key="d6">106</data>
+      <data key="d7">36084a9fab53433493f079e97e68bf65</data>
+    </node>
+    <node id="GRAPH TRANSFORMATION">
+      <data key="d0">EVENT</data>
+      <data key="d1">Graph transformation refers to the process of applying transformations to graphs, often used in modeling and analysis.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">2</data>
+      <data key="d6">107</data>
+      <data key="d7">eebcc7ec8e3e4df7aea83659bbdc2199</data>
+    </node>
+    <node id="PETRI NETS">
+      <data key="d0">EVENT</data>
+      <data key="d1">Petri nets are mathematical modeling tools used for describing and analyzing the flow of information and control in systems.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">1</data>
+      <data key="d6">108</data>
+      <data key="d7">ceadf262ef834e9ab146b20650912cae</data>
+    </node>
+    <node id="AIPS98 PLANNING COMMITTEE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The AIPS98 Planning Committee organized the conference focused on planning and artificial intelligence.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">1</data>
+      <data key="d6">109</data>
+      <data key="d7">7f65feab75424b53b24470d305ba331a</data>
+    </node>
+    <node id="ECEASST">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">ECEASST is a journal that publishes articles related to software engineering and technology transfer.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">0</data>
+      <data key="d6">110</data>
+      <data key="d7">fd9cb733b28d420cb5cef01e545a132c</data>
+    </node>
+    <node id="TWENTE STUDENT CONFERENCE ON IT">
+      <data key="d0">EVENT</data>
+      <data key="d1">The Twente Student Conference on IT is an academic event where students present their research in information technology.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">0</data>
+      <data key="d6">111</data>
+      <data key="d7">0fbcca3f17c649a08aea64b5a7d9ef36</data>
+    </node>
+    <node id="IEEE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">IEEE is a professional association for electronic engineering and electrical engineering, known for its conferences and publications.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">1</data>
+      <data key="d6">112</data>
+      <data key="d7">482027a59f32484c9c44fd700615c1b6</data>
+    </node>
+    <node id="MORGAN KAUFMANN PUBLISHERS INC.">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Morgan Kaufmann Publishers Inc. is a publisher known for its books and conference proceedings in computer science and engineering.</data>
+      <data key="d2">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d5">1</data>
+      <data key="d6">113</data>
+      <data key="d7">de837ff3d626451282ff6ac77a82216d</data>
+    </node>
+    <node id="BANK">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The bank is a financial institution that accepts deposits from the public and creates credit. It plays a crucial role in the economy by providing loans and facilitating transactions.</data>
+      <data key="d2">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d5">1</data>
+      <data key="d6">114</data>
+      <data key="d7">460295fed3ae4cd39f9f274cec9c2506</data>
+    </node>
+    <node id="FERRY">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The ferry is a mode of transportation that carries passengers and goods across a body of water, often operating on a regular schedule between two points.</data>
+      <data key="d2">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d5">3</data>
+      <data key="d6">115</data>
+      <data key="d7">553b285bba60460ab1ed8341ae61282b</data>
+    </node>
+    <node id="WOLF">
+      <data key="d0">PERSON</data>
+      <data key="d1">The wolf is a character in the context of the planning problem, representing an entity that has preferences or relationships with other entities, such as liking the goat.</data>
+      <data key="d2">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d5">1</data>
+      <data key="d6">116</data>
+      <data key="d7">cec95bf17e7e4c939b56c9c6f402a29f</data>
+    </node>
+    <node id="GOAT">
+      <data key="d0">PERSON</data>
+      <data key="d1">The goat is another character in the planning problem, which is liked by the wolf and is involved in the transportation scenario.</data>
+      <data key="d2">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d5">2</data>
+      <data key="d6">117</data>
+      <data key="d7">599164aead034bc19446efacc77554d2</data>
+    </node>
+    <node id="CABBAGE">
+      <data key="d0">PERSON</data>
+      <data key="d1">The cabbage is an object in the planning problem that is also liked by the goat, indicating a relationship between these entities.</data>
+      <data key="d2">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d5">1</data>
+      <data key="d6">118</data>
+      <data key="d7">bbf148ae4d48422f8fdef754cfa2b9e4</data>
+    </node>
+    <node id="LEFT">
+      <data key="d0">GEO</data>
+      <data key="d1">The left side is a location in the planning problem where certain actions take place, such as loading and unloading containers.</data>
+      <data key="d2">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d5">1</data>
+      <data key="d6">119</data>
+      <data key="d7">de61b2670999433f807a6a1dc2b81e43</data>
+    </node>
+    <node id="RIGHT">
+      <data key="d0">GEO</data>
+      <data key="d1">The right side is another location in the planning problem, serving as a destination for the ferry and the entities involved.</data>
+      <data key="d2">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d5">1</data>
+      <data key="d6">120</data>
+      <data key="d7">3e95dacfe57b4d57b5da4310ef2e157f</data>
+    </node>
+    <node id="LOC1">
+      <data key="d0">GEO</data>
+      <data key="d1">Loc1 is a specific location in the planning domain where the initial state of the containers and robots is defined.</data>
+      <data key="d2">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d5">3</data>
+      <data key="d6">121</data>
+      <data key="d7">1f1545308e9347af91fd03b94aadc21f</data>
+    </node>
+    <node id="LOC2">
+      <data key="d0">GEO</data>
+      <data key="d1">Loc2 is another location in the planning domain, serving as a destination for the containers and robots.</data>
+      <data key="d2">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d5">3</data>
+      <data key="d6">122</data>
+      <data key="d7">6ea81acaf232485e94fff638e03336e1</data>
+    </node>
+    <node id="ROBQ">
+      <data key="d0">PERSON</data>
+      <data key="d1">Robq is another robot in the Simplified Dock-Worker Robots domain, also tasked with loading and unloading containers at designated locations.</data>
+      <data key="d2">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d5">2</data>
+      <data key="d6">123</data>
+      <data key="d7">d136b08d586d488f9e4188b524c85a29</data>
+    </node>
+    <node id="CONTA">
+      <data key="d0">PERSON</data>
+      <data key="d1">Conta is a container in the planning domain that is involved in the loading and unloading actions performed by the robots.</data>
+      <data key="d2">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d5">2</data>
+      <data key="d6">124</data>
+      <data key="d7">cccfa151fedc4b218a8d96adc7dceabe</data>
+    </node>
+    <node id="CONTB">
+      <data key="d0">PERSON</data>
+      <data key="d1">Contb is another container in the planning domain, which is also subject to loading and unloading actions by the robots.</data>
+      <data key="d2">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d5">2</data>
+      <data key="d6">125</data>
+      <data key="d7">ce54725672a74ebcabe6127577dacb2b</data>
+    </node>
+    <node id="ROBR">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d5">2</data>
+      <data key="d6">126</data>
+      <data key="d7">ea2b28ca1a974ffab4517811dc1d1e5c</data>
+    </node>
+    <node id="REACHABILITY TREE">
+      <data key="d0">EVENT</data>
+      <data key="d1">The Reachability Tree is a method utilized to visualize the states and actions involved in a planning problem. It begins with an initial state and expands to predict future states based on the applicable actions. While the Reachability Tree serves as a simpler approach for planning in artificial intelligence, it is noted to be less efficient compared to the Planning Graph.</data>
+      <data key="d2">d1424b257022422187467b75dde41e8c,face077b78475e973a88681b263d5aa8</data>
+      <data key="d5">2</data>
+      <data key="d6">127</data>
+      <data key="d7">aff21f1da1654e7babdcf3fb0e4a75fc</data>
+    </node>
+    <node id="REACHABILITY GRAPH">
+      <data key="d0">EVENT</data>
+      <data key="d1">The Reachability Graph is a representation used in artificial intelligence that enhances the concept of the Reachability Tree by eliminating duplicate nodes. This improvement allows for a clearer depiction of the relationships between states at a certain depth. While it serves a similar purpose to the Reachability Tree in planning, the Reachability Graph possesses distinct structural properties that differentiate it from its predecessor.</data>
+      <data key="d2">d1424b257022422187467b75dde41e8c,face077b78475e973a88681b263d5aa8</data>
+      <data key="d5">2</data>
+      <data key="d6">128</data>
+      <data key="d7">dc2cc9016e3f49dbac7232f05cce794d</data>
+    </node>
+    <node id="LOCATIONS">
+      <data key="d0">GEO</data>
+      <data key="d1">Locations are specific places where actions such as loading and unloading occur, as well as various places involved in the planning problem. In this context, they are represented as loc1, loc2, and so on, where different actions and states are evaluated.</data>
+      <data key="d2">d1424b257022422187467b75dde41e8c,face077b78475e973a88681b263d5aa8</data>
+      <data key="d5">2</data>
+      <data key="d6">129</data>
+      <data key="d7">6ea0cef05f694dcea455478f40674e45</data>
+    </node>
+    <node id="CONTAINERS">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Containers are the entities whose locations are being tracked in the planning problem, represented as contb and conta.</data>
+      <data key="d2">face077b78475e973a88681b263d5aa8</data>
+      <data key="d5">1</data>
+      <data key="d6">130</data>
+      <data key="d7">7ab5d53a872f4dfc98f3d386879f3c75</data>
+    </node>
+    <node id="CHILD NODES">
+      <data key="d0">EVENT</data>
+      <data key="d1">Child nodes are the predicted states generated from the root node or subsequent nodes in the Reachability Tree, representing possible outcomes of actions.</data>
+      <data key="d2">face077b78475e973a88681b263d5aa8</data>
+      <data key="d5">1</data>
+      <data key="d6">131</data>
+      <data key="d7">af1d0fec22114a3398b8016f5225f9ed</data>
+    </node>
+    <node id="ACTIONS">
+      <data key="d0">EVENT</data>
+      <data key="d1">Actions are the operations that can be performed in the planning problem, which lead to changes in the state of the system.</data>
+      <data key="d2">face077b78475e973a88681b263d5aa8</data>
+      <data key="d5">2</data>
+      <data key="d6">132</data>
+      <data key="d7">b07a7f088364459098cd8511ff27a4c8</data>
+    </node>
+    <node id="ROOT NODE">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">face077b78475e973a88681b263d5aa8</data>
+      <data key="d5">1</data>
+      <data key="d6">133</data>
+      <data key="d7">8870cf2b5df64d2cab5820f67e29b9f1</data>
+    </node>
+    <node id="ROBOTS">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Robots are automated machines used in various tasks, including loading and unloading containers in planning scenarios.</data>
+      <data key="d2">d1424b257022422187467b75dde41e8c</data>
+      <data key="d5">1</data>
+      <data key="d6">134</data>
+      <data key="d7">cd130938a2844050be991af70baf5ee0</data>
+    </node>
+    <node id="PROPOSITIONS">
+      <data key="d0">EVENT</data>
+      <data key="d1">Propositions are statements or assertions that can be true or false, used in the context of planning to define goals and conditions.</data>
+      <data key="d2">d1424b257022422187467b75dde41e8c</data>
+      <data key="d5">1</data>
+      <data key="d6">135</data>
+      <data key="d7">43544b99c3b04b059546198a0ae6366d</data>
+    </node>
+    <node id="SOLUTION PLAN">
+      <data key="d0">EVENT</data>
+      <data key="d1">A Solution Plan is a sequence of actions designed to achieve a specific goal in a planning problem.</data>
+      <data key="d2">d1424b257022422187467b75dde41e8c</data>
+      <data key="d5">2</data>
+      <data key="d6">136</data>
+      <data key="d7">a671bf7fea2f4514b6e96ba99127fafd</data>
+    </node>
+    <node id="DUMMY ACTIONS">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">d1424b257022422187467b75dde41e8c</data>
+      <data key="d5">1</data>
+      <data key="d6">137</data>
+      <data key="d7">525f41ea20274a05af4e52b625b473f3</data>
+    </node>
+    <edge source="A1&#31558;&#35352;" target="PDDL">
+      <data key="d8">1.0</data>
+      <data key="d9">A1&#31558;&#35352; discusses the use of PDDL in the context of planning graphs and heuristics</data>
+      <data key="d10">82cf4c7c174acb518c35fedddc4c389f</data>
+      <data key="d11">071a416efbec4f0886c19ac68f6d43cb</data>
+      <data key="d12">0</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PDDL" target="GREEDY ALGORITHM">
+      <data key="d8">1.0</data>
+      <data key="d9">Greedy algorithms can be applied to planning problems defined in PDDL</data>
+      <data key="d10">82cf4c7c174acb518c35fedddc4c389f</data>
+      <data key="d11">6d8473ef3b1042bf87178a611e3dbcc6</data>
+      <data key="d12">1</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PDDL" target="FACTORED REPRESENTATION">
+      <data key="d8">1.0</data>
+      <data key="d9">Factored representation is a technique used within PDDL to represent states in planning problems</data>
+      <data key="d10">82cf4c7c174acb518c35fedddc4c389f</data>
+      <data key="d11">30c9641543c24773938bd8ec57ea98ab</data>
+      <data key="d12">2</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PDDL" target="GROOVE">
+      <data key="d8">7.0</data>
+      <data key="d9">GROOVE is a versatile tool that can be utilized to model and analyze systems defined in the Planning Domain Definition Language (PDDL). It processes PDDL descriptions to create graph transformation systems, effectively incorporating PDDL as a language for defining planning problems. In this context, GROOVE translates PDDL actions into graph rules, facilitating both modeling and analysis. Additionally, it converts PDDL descriptions into graph representations, which are essential for problem-solving purposes. This translation process underscores the relationship between PDDL and GROOVE, highlighting their interconnected roles in the field of AI planning and graph transformations. Together, PDDL and GROOVE serve as complementary tools that enhance the capabilities of AI planning methodologies.</data>
+      <data key="d10">06e4657fd3359c4741a480652dae616c,84dc5179e82b359101c3133840141db7,8a6ad025a7df9b5b0bfdc75058a12cfd,986cddee6d7f2326ba76a0b5022599ca,a33289b1683704fd78a07aac326d326c,bf7f32c29f5be7503d1c6a818e1086ac,d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d11">18b839da898e4026b81727d759d95c6a</data>
+      <data key="d12">3</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PDDL" target="AI PLANNING">
+      <data key="d8">1.0</data>
+      <data key="d9">PDDL is a language used within the field of AI planning to describe problems and domains</data>
+      <data key="d10">986cddee6d7f2326ba76a0b5022599ca</data>
+      <data key="d11">eeef6ae5c464400c8755900b4f1ac37a</data>
+      <data key="d12">4</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PDDL" target="EDELKAMP">
+      <data key="d8">2.0</data>
+      <data key="d9">Edelkamp has investigated the potential of using PDDL (Planning Domain Definition Language) for model checking, thereby enhancing the connection between planning and graph transformation. This exploration has not only contributed to the theoretical understanding of these concepts but has also played a significant role in the development and application of PDDL in the context of software model checking.</data>
+      <data key="d10">0f3969a320ce2970f1e7d7bb56d14116,8a6ad025a7df9b5b0bfdc75058a12cfd</data>
+      <data key="d11">422433aa45804c7ebb973b2fafce5da6</data>
+      <data key="d12">5</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PDDL" target="RENSINK">
+      <data key="d8">1.0</data>
+      <data key="d9">Rensink suggested the relationship between graph transformation systems and PDDL, indicating a collaborative exploration of these fields</data>
+      <data key="d10">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d11">86505bca739d4bccaaa1a8e0f3baffdc</data>
+      <data key="d12">6</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PDDL" target="STRIPS">
+      <data key="d8">1.0</data>
+      <data key="d9">PDDL was inspired by STRIPS, which is a foundational planning language</data>
+      <data key="d10">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d11">1af9faf341e14a5bbf4ddc9080e8dc0b</data>
+      <data key="d12">7</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PDDL" target="HEURISTIC EXPLORATION ALGORITHMS">
+      <data key="d8">1.0</data>
+      <data key="d9">Heuristic exploration algorithms utilize PDDL as input to find solutions to planning problems</data>
+      <data key="d10">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d11">353d91abc68648639d65a549e59b5cf3</data>
+      <data key="d12">8</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PDDL" target="SECTION 5">
+      <data key="d8">1.0</data>
+      <data key="d9">Section 5 provides examples and syntax details for understanding PDDL</data>
+      <data key="d10">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d11">7ce637e4f35b42e3a9f8272cab69cd22</data>
+      <data key="d12">9</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PDDL" target="GEREVINI">
+      <data key="d8">1.0</data>
+      <data key="d9">Gerevini's work on PDDL grammar is foundational for building translators that connect PDDL with graph transformation systems</data>
+      <data key="d10">8a6ad025a7df9b5b0bfdc75058a12cfd</data>
+      <data key="d11">4d999d7744b04a998475f8f8531589f0</data>
+      <data key="d12">10</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PDDL" target="GRAPH TRANSFORMATION SYSTEM">
+      <data key="d8">2.0</data>
+      <data key="d9">PDDL and graph transformation systems are interrelated concepts in the realm of problem modeling and analysis. Graph transformation systems serve as a framework to model problems that can be expressed in PDDL (Planning Domain Definition Language). They facilitate the translation of PDDL actions into graph rules, enabling a structured approach to analyze these actions within a graphical context. This relationship underscores the utility of graph transformation systems in enhancing the understanding and application of PDDL in various problem-solving scenarios.</data>
+      <data key="d10">84dc5179e82b359101c3133840141db7,bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d11">9a6f414210e14841a5b0e661aedc898d</data>
+      <data key="d12">11</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PDDL" target="FERRYMEN PROBLEM">
+      <data key="d8">1.0</data>
+      <data key="d9">The Ferryman Problem can be expressed and solved using PDDL, similar to the Wumpus Problem</data>
+      <data key="d10">a33289b1683704fd78a07aac326d326c</data>
+      <data key="d11">db541b7260974db8bac94e953009f60e</data>
+      <data key="d12">12</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PDDL" target="GRAPH TRANSFORMATION SYSTEMS">
+      <data key="d8">1.0</data>
+      <data key="d9">Graph transformation systems can be translated into PDDL descriptions for planning purposes</data>
+      <data key="d10">a33289b1683704fd78a07aac326d326c</data>
+      <data key="d11">f2ff8044718648e18acef16dd9a65436</data>
+      <data key="d12">13</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PDDL" target="APPENDIX D">
+      <data key="d8">1.0</data>
+      <data key="d9">Appendix D contains examples of generated PDDL files that are relevant to the discussion of PDDL in the paper</data>
+      <data key="d10">84dc5179e82b359101c3133840141db7</data>
+      <data key="d11">00d785e7d76b47ec81b508e768d40584</data>
+      <data key="d12">14</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PDDL" target="TRANSLATOR">
+      <data key="d8">1.0</data>
+      <data key="d9">The translator is designed to convert PDDL code into graph representations and vice versa</data>
+      <data key="d10">84dc5179e82b359101c3133840141db7</data>
+      <data key="d11">87915637da3e474c9349bd0ae604bd95</data>
+      <data key="d12">15</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PLANNING GRAPHS" target="INITIAL STATE">
+      <data key="d8">1.0</data>
+      <data key="d9">Planning graphs are built from the initial state to estimate the steps to reach the goal state</data>
+      <data key="d10">82cf4c7c174acb518c35fedddc4c389f</data>
+      <data key="d11">8f1eba29f39e411188200bf0d14628ec</data>
+      <data key="d12">16</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PLANNING GRAPHS" target="GOAL STATE">
+      <data key="d8">1.0</data>
+      <data key="d9">Planning graphs help determine if the goal state can be reached from the initial state</data>
+      <data key="d10">82cf4c7c174acb518c35fedddc4c389f</data>
+      <data key="d11">7282c73622b8408e97289d959faff483</data>
+      <data key="d12">17</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PLANNING GRAPHS" target="MUTEX">
+      <data key="d8">1.0</data>
+      <data key="d9">Mutex relations are defined within planning graphs to indicate actions that cannot occur simultaneously</data>
+      <data key="d10">82cf4c7c174acb518c35fedddc4c389f</data>
+      <data key="d11">3deb220d31f74103aa44870a36a63220</data>
+      <data key="d12">18</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="INITIAL STATE" target="SEARCH GRAPH">
+      <data key="d8">1.0</data>
+      <data key="d9">The search graph begins from the initial state and explores possible actions to reach the goal state</data>
+      <data key="d10">82cf4c7c174acb518c35fedddc4c389f</data>
+      <data key="d11">af7a1584dd15492cb9a4940e285f57fc</data>
+      <data key="d12">19</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="GOAL STATE" target="STATE">
+      <data key="d8">1.0</data>
+      <data key="d9">The goal state is a specific type of state that the planning process aims to achieve</data>
+      <data key="d10">82cf4c7c174acb518c35fedddc4c389f</data>
+      <data key="d11">6e8d9029ce4e4ea182367173ab2c7bbf</data>
+      <data key="d12">20</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="MUTEX" target="PRECONDITIONS">
+      <data key="d8">1.0</data>
+      <data key="d9">Preconditions can be in mutex if they are dependent on each other, meaning that satisfying one precondition may negate another.</data>
+      <data key="d10">face077b78475e973a88681b263d5aa8</data>
+      <data key="d11">cbf232211e7d4eb6abdbe182f71c2cf0</data>
+      <data key="d12">21</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="MUTEX" target="ACTIONS">
+      <data key="d8">1.0</data>
+      <data key="d9">Mutex conditions apply to actions that cannot be executed together due to their conflicting effects, ensuring that only compatible actions are considered.</data>
+      <data key="d10">face077b78475e973a88681b263d5aa8</data>
+      <data key="d11">bb0cff774a4440b289cc6f3b929fe13c</data>
+      <data key="d12">22</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="RELAXATION" target="ADMISSIBLE HEURISTICS">
+      <data key="d8">1.0</data>
+      <data key="d9">Relaxation techniques can help generate admissible heuristics for planning problems</data>
+      <data key="d10">82cf4c7c174acb518c35fedddc4c389f</data>
+      <data key="d11">ce55841ebfdd47008bab8c258f10372e</data>
+      <data key="d12">23</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="ACTION" target="STATE">
+      <data key="d8">2.0</data>
+      <data key="d9">In the context of planning problems, "ACTION" and "STATE" are interrelated concepts. Actions are applied to states to facilitate transitions from one state to another. Specifically, an action is executed on a given state, resulting in the production of a new state during the testing process. This relationship highlights the dynamic nature of states in planning, where actions serve as the mechanisms for change and progression.</data>
+      <data key="d10">82cf4c7c174acb518c35fedddc4c389f,bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d11">6090e736374d45fd84f0e4610a314f8f</data>
+      <data key="d12">24</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="ACTION" target="PRECONDITION">
+      <data key="d8">1.0</data>
+      <data key="d9">Actions in the Wumpus game have specific preconditions that must be satisfied before they can be executed</data>
+      <data key="d10">ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d11">0e8d921ccd8d4a8594b65b7fd19f7120</data>
+      <data key="d12">25</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="ACTION" target="EFFECT">
+      <data key="d8">1.0</data>
+      <data key="d9">Each action in the Wumpus game has effects that describe the changes that occur when the action is performed</data>
+      <data key="d10">ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d11">59c726a8792d443e84ab052cb7942b4a</data>
+      <data key="d12">26</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="STATE" target="TEST CASES">
+      <data key="d8">1.0</data>
+      <data key="d9">Test cases are designed to validate the correctness of state transitions resulting from actions</data>
+      <data key="d10">bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d11">4f2c665decf242b0bfcaf7350b0e02ed</data>
+      <data key="d12">27</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="RONALD MEIJER" target="UNIVERSITY OF TWENTE">
+      <data key="d8">1.0</data>
+      <data key="d9">Ronald Meijer is affiliated with the University of Twente as a researcher</data>
+      <data key="d10">986cddee6d7f2326ba76a0b5022599ca</data>
+      <data key="d11">66cdf168f36d4a57a505028c97dc06e0</data>
+      <data key="d12">28</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="RONALD MEIJER" target="17TH TWENTE STUDENT CONFERENCE ON IT">
+      <data key="d8">1.0</data>
+      <data key="d9">Ronald Meijer presented his research at the 17th Twente Student Conference on IT</data>
+      <data key="d10">986cddee6d7f2326ba76a0b5022599ca</data>
+      <data key="d11">38f51478f41f48db9bee570859b6f43e</data>
+      <data key="d12">29</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="UNIVERSITY OF TWENTE" target="17TH TWENTE STUDENT CONFERENCE ON IT">
+      <data key="d8">1.0</data>
+      <data key="d9">The 17th Twente Student Conference on IT is hosted by the University of Twente</data>
+      <data key="d10">986cddee6d7f2326ba76a0b5022599ca</data>
+      <data key="d11">896d2a51e8de47de85ba8ced108c3d53</data>
+      <data key="d12">30</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="UNIVERSITY OF TWENTE" target="ENSCHEDE">
+      <data key="d8">1.0</data>
+      <data key="d9">The University of Twente is located in Enschede, Netherlands</data>
+      <data key="d10">986cddee6d7f2326ba76a0b5022599ca</data>
+      <data key="d11">14555b518e954637b83aa762dc03164e</data>
+      <data key="d12">31</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="UNIVERSITY OF TWENTE" target="GROOVE">
+      <data key="d8">1.0</data>
+      <data key="d9">GROOVE is developed and used at the University of Twente, leveraging the institution's knowledge and resources</data>
+      <data key="d10">06e4657fd3359c4741a480652dae616c</data>
+      <data key="d11">b1f6164116d44fe8b8f135d7f65b9e58</data>
+      <data key="d12">32</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="GROOVE" target="GRAPH TRANSFORMATIONS">
+      <data key="d8">1.0</data>
+      <data key="d9">GROOVE utilizes graph transformations to model and analyze systems</data>
+      <data key="d10">986cddee6d7f2326ba76a0b5022599ca</data>
+      <data key="d11">c8b2408617804483b620e1a6691ac90d</data>
+      <data key="d12">33</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="GROOVE" target="GRAPH TRANSFORMATION SYSTEMS">
+      <data key="d8">1.0</data>
+      <data key="d9">GROOVE is a tool specifically designed for modeling graph transformation systems</data>
+      <data key="d10">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d11">a5e0d1644eb547ba9a5c3211aac4631a</data>
+      <data key="d12">34</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="GROOVE" target="WUMPUS PROBLEM">
+      <data key="d8">2.0</data>
+      <data key="d9">GROOVE is a tool that is utilized to represent and solve various AI problems, one of which is the Wumpus Problem. The Wumpus Problem serves as a previous example of a problem that encountered translation issues, which led to it not being used again in certain contexts. However, within the framework of GROOVE, the Wumpus Problem is effectively represented as a graph, showcasing the capabilities of the tool in addressing and visualizing complex AI challenges.</data>
+      <data key="d10">06e4657fd3359c4741a480652dae616c,84dc5179e82b359101c3133840141db7</data>
+      <data key="d11">5a28b94bc63b44edb30c54748fd14f15</data>
+      <data key="d12">35</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="GROOVE" target="STATE SPACE">
+      <data key="d8">1.0</data>
+      <data key="d9">GROOVE features a built-in state space generator that visualizes all possible states of a system</data>
+      <data key="d10">06e4657fd3359c4741a480652dae616c</data>
+      <data key="d11">f97011b2a99d44648e18d517e1eae15c</data>
+      <data key="d12">36</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="GROOVE" target="GRAPH TRANSFORMATION SYSTEM">
+      <data key="d8">1.0</data>
+      <data key="d9">GROOVE is a specific implementation of a graph transformation system, focusing on modeling and rule application</data>
+      <data key="d10">06e4657fd3359c4741a480652dae616c</data>
+      <data key="d11">35489ca6a63b47d6a8913cf333818bc1</data>
+      <data key="d12">37</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="GROOVE" target="COMPILER">
+      <data key="d8">1.0</data>
+      <data key="d9">The compiler is used to facilitate the integration of PDDL with GROOVE by converting PDDL-files into graph representations</data>
+      <data key="d10">a33289b1683704fd78a07aac326d326c</data>
+      <data key="d11">5d3344f45e654d2c808481672f2f08dd</data>
+      <data key="d12">38</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="GROOVE" target="PDDL-FILES">
+      <data key="d8">1.0</data>
+      <data key="d9">PDDL-files are utilized by GROOVE to create graph representations for planning problems</data>
+      <data key="d10">a33289b1683704fd78a07aac326d326c</data>
+      <data key="d11">6fb57f83baec45c9b30490ee991f433f</data>
+      <data key="d12">39</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="GROOVE" target="RONALD M.">
+      <data key="d8">1.0</data>
+      <data key="d9">Ronald M. is involved in the development of the GROOVE tool and its associated translators</data>
+      <data key="d10">84dc5179e82b359101c3133840141db7</data>
+      <data key="d11">68762e6f0d1c41cd857c6b964a8e76c3</data>
+      <data key="d12">40</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="GROOVE" target="GRAPH TRANSFORMATION">
+      <data key="d8">1.0</data>
+      <data key="d9">Graph transformation techniques are a core part of the GROOVE framework</data>
+      <data key="d10">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d11">70634e10a5e845aa8c6a32fe7e8eb2b2</data>
+      <data key="d12">41</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="LEVEL SUM HEURISTICS" target="AI PLANNING">
+      <data key="d8">1.0</data>
+      <data key="d9">Level sum heuristics are a method used in AI planning to estimate costs</data>
+      <data key="d10">986cddee6d7f2326ba76a0b5022599ca</data>
+      <data key="d11">04085f7cf46544b79597fc49286ff84d</data>
+      <data key="d12">42</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="STATE SPACE" target="PLANNING GRAPH">
+      <data key="d8">1.0</data>
+      <data key="d9">Planning graphs are used to explore the state space in AI planning problems</data>
+      <data key="d10">986cddee6d7f2326ba76a0b5022599ca</data>
+      <data key="d11">d203efdbfb2f4b2a899abfb31cf72e82</data>
+      <data key="d12">43</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="STATE SPACE" target="HEGEDUS">
+      <data key="d8">1.0</data>
+      <data key="d9">Hegedus described frameworks to explore the state space of graph transformation systems, enhancing understanding of their behavior</data>
+      <data key="d10">8a6ad025a7df9b5b0bfdc75058a12cfd</data>
+      <data key="d11">6731a665561840c2898ce8c9788e4c88</data>
+      <data key="d12">44</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="STATE SPACE" target="WUMPUS PROBLEM">
+      <data key="d8">1.0</data>
+      <data key="d9">The Wumpus Problem generates a state space that includes various end states based on the agent's actions</data>
+      <data key="d10">a33289b1683704fd78a07aac326d326c</data>
+      <data key="d11">4026806fa92f4e849a59a7f5c9a45c79</data>
+      <data key="d12">45</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="STATE SPACE" target="AGENT">
+      <data key="d8">1.0</data>
+      <data key="d9">The agent's actions lead to changes in the state space, creating new possible states based on the agent's decisions</data>
+      <data key="d10">a33289b1683704fd78a07aac326d326c</data>
+      <data key="d11">68e0c60d2e8845d89d9d0ad397833648</data>
+      <data key="d12">46</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="STATE SPACE" target="END STATES">
+      <data key="d8">1.0</data>
+      <data key="d9">End states are part of the state space, representing the various outcomes that can be achieved through planning actions</data>
+      <data key="d10">a33289b1683704fd78a07aac326d326c</data>
+      <data key="d11">101572f552b54e529fe7765c05168981</data>
+      <data key="d12">47</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PLANNING GRAPH" target="REACHABILITY GRAPH">
+      <data key="d8">2.0</data>
+      <data key="d9">The Planning Graph and the Reachability Graph are two related concepts in the field of planning and state representation. The Reachability Graph serves as a foundational model that illustrates the possible states and actions within a planning problem. In contrast, the Planning Graph builds upon this framework by incorporating a union of states at each level, which enhances the efficiency of representing actions and states. As a result, the Planning Graph is considered a more complex alternative to the Reachability Graph, providing a more sophisticated approach to solving planning problems.</data>
+      <data key="d10">d1424b257022422187467b75dde41e8c,face077b78475e973a88681b263d5aa8</data>
+      <data key="d11">60c58026b2764b40adffca6eaa31d6d9</data>
+      <data key="d12">48</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PLANNING GRAPH" target="REACHABILITY TREE">
+      <data key="d8">1.0</data>
+      <data key="d9">The Planning Graph is a more complex alternative to the Reachability Tree for solving planning problems</data>
+      <data key="d10">d1424b257022422187467b75dde41e8c</data>
+      <data key="d11">ad1595a78935472999444c9330e7730e</data>
+      <data key="d12">49</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PLANNING GRAPH" target="DUMMY ACTIONS">
+      <data key="d8">1.0</data>
+      <data key="d9">Dummy Actions are utilized within the Planning Graph to facilitate the planning process</data>
+      <data key="d10">d1424b257022422187467b75dde41e8c</data>
+      <data key="d11">735d19aea0744b2295556841c5c4c3fd</data>
+      <data key="d12">50</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="EDELKAMP" target="RENSINK">
+      <data key="d8">1.0</data>
+      <data key="d9">Edelkamp and Rensink are both researchers contributing to the understanding of PDDL and its applications</data>
+      <data key="d10">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d11">c725babdb14a485582f8fbdf95429030</data>
+      <data key="d12">51</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="GRAPH TRANSFORMATION SYSTEMS" target="GRAPH">
+      <data key="d8">1.0</data>
+      <data key="d9">Graph transformation systems utilize graphs to model changes in non-static environments</data>
+      <data key="d10">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d11">a0047221896d418d849847d422fa4bb8</data>
+      <data key="d12">52</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="MODEL CHECKING" target="PLANNING DOMAIN DEFINITION LANGUAGE">
+      <data key="d8">1.0</data>
+      <data key="d9">PDDL is used in model checking to verify the correctness of systems</data>
+      <data key="d10">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d11">98fc2ee593184c5a839454db4eec7013</data>
+      <data key="d12">53</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="TRANSLATION" target="GRAPHS">
+      <data key="d8">1.0</data>
+      <data key="d9">The translation process involves converting PDDL descriptions into graph representations</data>
+      <data key="d10">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d11">80020a1da63042459e00266b2a605452</data>
+      <data key="d12">54</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="TRANSLATION" target="SECTION 6">
+      <data key="d8">1.0</data>
+      <data key="d9">Section 6 describes the methodology for translating PDDL to graphs</data>
+      <data key="d10">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d11">31a7e680c4d54101afe4c8d52d246913</data>
+      <data key="d12">55</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="TRANSLATION" target="SECTION 7">
+      <data key="d8">1.0</data>
+      <data key="d9">Section 7 outlines the reverse translation from graphs back to PDDL</data>
+      <data key="d10">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d11">351abba16e5c448994c6daf48121b14d</data>
+      <data key="d12">56</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="TRANSLATION" target="SECTION 8">
+      <data key="d8">1.0</data>
+      <data key="d9">Section 8 reflects on the contributions of the translation process discussed in the paper</data>
+      <data key="d10">0f3969a320ce2970f1e7d7bb56d14116</data>
+      <data key="d11">50ea7d3b69614bcdbfbff7ddbfbf3d34</data>
+      <data key="d12">57</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="AGENT" target="WUMPUS">
+      <data key="d8">2.0</data>
+      <data key="d9">In the context of the Wumpus World challenge, the agent is tasked with navigating the environment while facing the dual objectives of avoiding and ultimately defeating the Wumpus. To successfully complete the challenge, the agent must carefully maneuver through the game, ensuring it does not encounter the Wumpus, which poses a significant threat. However, the ultimate goal is to defeat the Wumpus, as this is essential for achieving success in the Wumpus World challenge. Thus, the agent's strategy must balance the need for caution with the necessity of confrontation.</data>
+      <data key="d10">8a6ad025a7df9b5b0bfdc75058a12cfd,ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d11">004f40a5aeca48a1879db728eb12bcba</data>
+      <data key="d12">58</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="AGENT" target="TREASURE">
+      <data key="d8">1.0</data>
+      <data key="d9">The agent's goal is to collect the treasure after defeating the Wumpus in Wumpus World</data>
+      <data key="d10">8a6ad025a7df9b5b0bfdc75058a12cfd</data>
+      <data key="d11">4465efb7f6ed4dedad72a658184addd2</data>
+      <data key="d12">59</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="AGENT" target="GOLD">
+      <data key="d8">1.0</data>
+      <data key="d9">The agent's goal is to collect the gold in the Wumpus game</data>
+      <data key="d10">ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d11">b0dd60e11dad4ff782623acf039b3948</data>
+      <data key="d12">60</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="AGENT" target="ARROW">
+      <data key="d8">1.0</data>
+      <data key="d9">The agent can have the arrow, which is used to defeat the Wumpus</data>
+      <data key="d10">ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d11">db8c43fa4df947b09e5754d3b1393ead</data>
+      <data key="d12">61</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="AGENT" target="PIT">
+      <data key="d8">1.0</data>
+      <data key="d9">The agent must avoid falling into pits, which are hazards in the game</data>
+      <data key="d10">ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d11">5dabc4cd05da425cb194a04482bf0c29</data>
+      <data key="d12">62</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="AGENT" target="OBJECT">
+      <data key="d8">1.0</data>
+      <data key="d9">The agent is one of the objects that can interact with other objects in the Wumpus game</data>
+      <data key="d10">ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d11">9d08f285a7be4c79b8f359c51d51db37</data>
+      <data key="d12">63</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="AGENT" target="WUMPUS PROBLEM">
+      <data key="d8">1.0</data>
+      <data key="d9">The agent is the main character that navigates the Wumpus Problem, making decisions to find treasure and avoid danger</data>
+      <data key="d10">a33289b1683704fd78a07aac326d326c</data>
+      <data key="d11">adffed660d154b519c1817e514e83096</data>
+      <data key="d12">64</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="AGENT" target="AGENT MOVEMENT">
+      <data key="d8">1.0</data>
+      <data key="d9">The agent's movement is a key aspect of its actions in the Wumpus Problem, affecting the state space and end states</data>
+      <data key="d10">a33289b1683704fd78a07aac326d326c</data>
+      <data key="d11">b7e9c9ef572c445a9574ca571e41fb96</data>
+      <data key="d12">65</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="WUMPUS" target="PIT">
+      <data key="d8">1.0</data>
+      <data key="d9">Both the Wumpus and pits are dangers that the agent must navigate around in the game</data>
+      <data key="d10">ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d11">dcb9f281cd6248c699e0ebb285a42a5e</data>
+      <data key="d12">66</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="WUMPUS" target="OBJECT">
+      <data key="d8">1.0</data>
+      <data key="d9">The Wumpus is an object that poses a threat to the agent in the game</data>
+      <data key="d10">ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d11">072cdee531b74513984f49d99a8d64a0</data>
+      <data key="d12">67</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="HEURISTIC SEARCH" target="ESTLER">
+      <data key="d8">1.0</data>
+      <data key="d9">Estler developed a planning framework that uses heuristic search algorithms to direct the search in graph-based systems</data>
+      <data key="d10">8a6ad025a7df9b5b0bfdc75058a12cfd</data>
+      <data key="d11">5ae335d9210a45fda3f92a9a028d6d9b</data>
+      <data key="d12">68</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="HEURISTIC SEARCH" target="SNIPPE">
+      <data key="d8">1.0</data>
+      <data key="d9">Snippe researched A* search algorithms, which are relevant for exploring state spaces in graph transformation systems</data>
+      <data key="d10">8a6ad025a7df9b5b0bfdc75058a12cfd</data>
+      <data key="d11">5ac60a941a5b4934bdc43d2f87de601c</data>
+      <data key="d12">69</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="GOLD" target="OBJECT">
+      <data key="d8">1.0</data>
+      <data key="d9">Gold is an object that the agent aims to collect in the Wumpus game</data>
+      <data key="d10">ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d11">d405c3154d0e48ce96fad4c28fe20590</data>
+      <data key="d12">70</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="ARROW" target="OBJECT">
+      <data key="d8">1.0</data>
+      <data key="d9">The arrow is an object that the agent can use to interact with the Wumpus</data>
+      <data key="d10">ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d11">7923d8521c744bd9aab131c1aea91ffd</data>
+      <data key="d12">71</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PIT" target="OBJECT">
+      <data key="d8">1.0</data>
+      <data key="d9">Pits are objects that represent hazards in the Wumpus game that the agent must avoid</data>
+      <data key="d10">ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d11">5bd156c87ec44e19ae6f8f62e6e50b9d</data>
+      <data key="d12">72</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PREDICATE" target="DOMAIN">
+      <data key="d8">1.0</data>
+      <data key="d9">The domain defines the predicates that describe the properties and relationships of objects in the Wumpus game</data>
+      <data key="d10">ae1f0336c58e23a0ad86a060639755c9</data>
+      <data key="d11">c1a146d7fb16429ea6d0aa2a55ee597f</data>
+      <data key="d12">73</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PRECONDITION" target="ATOMIC ACTION">
+      <data key="d8">1.0</data>
+      <data key="d9">An atomic action has specific preconditions that must be satisfied before it can be executed</data>
+      <data key="d10">bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d11">ede9350632084da5b0b577ff799ab14b</data>
+      <data key="d12">74</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="EFFECT" target="ATOMIC ACTION">
+      <data key="d8">1.0</data>
+      <data key="d9">The effect is the result of executing an atomic action on a state</data>
+      <data key="d10">bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d11">ed559fb4ebde45518849ec803b350fa3</data>
+      <data key="d12">75</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PRECONDITIONS" target="ACTIONS">
+      <data key="d8">1.0</data>
+      <data key="d9">Actions have preconditions that must be satisfied in order for them to be executed in the planning process.</data>
+      <data key="d10">face077b78475e973a88681b263d5aa8</data>
+      <data key="d11">f422035f8b78417f98e4d116971cf9f3</data>
+      <data key="d12">76</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PRECONDITIONS" target="SOLUTION PLAN">
+      <data key="d8">1.0</data>
+      <data key="d9">Preconditions are essential for determining the validity of actions within the Solution Plan</data>
+      <data key="d10">d1424b257022422187467b75dde41e8c</data>
+      <data key="d11">c79d686eba044c5586c706cdc096817d</data>
+      <data key="d12">77</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="QUANTIFIER NODE" target="ERASER RULE">
+      <data key="d8">1.0</data>
+      <data key="d9">The eraser rule references the quantifier node to ensure independent matching in the graph transformation</data>
+      <data key="d10">bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d11">0f70db1e598d463fbbcdd1e288bd9490</data>
+      <data key="d12">78</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="A" target="B">
+      <data key="d8">1.0</data>
+      <data key="d9">A and B are used as objects in the test cases to demonstrate the application of actions and rules</data>
+      <data key="d10">bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d11">b35c3d1a7daa4924b6bdb58bc69c354d</data>
+      <data key="d12">79</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="ERASER RULE" target="LEVEL INDICATOR">
+      <data key="d8">1.0</data>
+      <data key="d9">The eraser rule utilizes the level indicator to determine the behavior of the quantifier node</data>
+      <data key="d10">bf7f32c29f5be7503d1c6a818e1086ac</data>
+      <data key="d11">a97e2ecd870944cfbe71c79bc0fcc752</data>
+      <data key="d12">80</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="FERRYMEN PROBLEM" target="APPENDIX C">
+      <data key="d8">1.0</data>
+      <data key="d9">The Ferryman Problem is discussed in Appendix C as an example relevant to the paper's topic</data>
+      <data key="d10">84dc5179e82b359101c3133840141db7</data>
+      <data key="d11">3e1b063bbfa9423d84e50311296d2f3c</data>
+      <data key="d12">81</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="TRANSLATOR" target="VALIDATION AND TESTING">
+      <data key="d8">1.0</data>
+      <data key="d9">Validation and testing are essential steps in ensuring the translator functions correctly</data>
+      <data key="d10">84dc5179e82b359101c3133840141db7</data>
+      <data key="d11">9a8ce816ee954bdabd01ea2081538009</data>
+      <data key="d12">82</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="EXISTENTIAL QUANTIFIERS" target="OBJECT CREATION AND DELETION">
+      <data key="d8">1.0</data>
+      <data key="d9">Existential quantifiers are relevant to the discussion of limitations in object creation and deletion in PDDL</data>
+      <data key="d10">84dc5179e82b359101c3133840141db7</data>
+      <data key="d11">09f18f81442d4d6d93a90f0fac683f9b</data>
+      <data key="d12">83</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="A. GEREVINI" target="D. LONG">
+      <data key="d8">1.0</data>
+      <data key="d9">A. Gerevini and D. Long co-authored a technical report on BNF description of PDDL3.0</data>
+      <data key="d10">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d11">e02be3e37ca0454883a4c1fd859c24bb</data>
+      <data key="d12">84</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="M. GHALLAB" target="A. HOWE">
+      <data key="d8">1.0</data>
+      <data key="d9">M. Ghallab and A. Howe co-authored a paper on PDDL</data>
+      <data key="d10">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d11">6e0c81bef5364c988b21bf9b709d9861</data>
+      <data key="d12">85</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="M. GHALLAB" target="AIPS98 PLANNING COMMITTEE">
+      <data key="d8">1.0</data>
+      <data key="d9">M. Ghallab was a member of the AIPS98 Planning Committee</data>
+      <data key="d10">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d11">1dbc51475cb04dafa4a8833a8378635e</data>
+      <data key="d12">86</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="D. CHRISTIANSON" target="D. MCDERMOTT">
+      <data key="d8">1.0</data>
+      <data key="d9">D. Christianson and D. McDermott co-authored a paper on PDDL</data>
+      <data key="d10">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d11">c12b9ebd8b4e42b7896822a32e3fa6eb</data>
+      <data key="d12">87</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="A. RAM" target="M. VELOSO">
+      <data key="d8">1.0</data>
+      <data key="d9">A. Ram and M. Veloso co-authored a paper on PDDL</data>
+      <data key="d10">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d11">27505f6ade4b4e5f9316ffe9c34821f7</data>
+      <data key="d12">88</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="D. WELD" target="D. WILKINS">
+      <data key="d8">1.0</data>
+      <data key="d9">D. Weld and D. Wilkins co-authored a paper on PDDL</data>
+      <data key="d10">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d11">0ee7db2c6bea4630ba9f0c25e8a967ad</data>
+      <data key="d12">89</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="A. H. GHAMARIAN" target="M. J. DE MOL">
+      <data key="d8">1.0</data>
+      <data key="d9">A. H. Ghamarian and M. J. de Mol co-authored a paper on modeling and analysis using GROOVE</data>
+      <data key="d10">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d11">5a6c1d15424149f69052cd8d91fbff75</data>
+      <data key="d12">90</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="A. H. GHAMARIAN" target="AUTOMATED SOFTWARE ENGINEERING (ASE)">
+      <data key="d8">1.0</data>
+      <data key="d9">A. H. Ghamarian presented at the ASE conference</data>
+      <data key="d10">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d11">d005bf75c31d4848ad7041f39651e59c</data>
+      <data key="d12">91</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="A. RENSINK" target="E. ZAMBON">
+      <data key="d8">1.0</data>
+      <data key="d9">A. Rensink and E. Zambon co-authored a paper on modeling and analysis using GROOVE</data>
+      <data key="d10">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d11">9b3eef8f3a3a45e6873838db95295b8a</data>
+      <data key="d12">92</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="M. V. ZIMAKOVA" target="R. HECKEL">
+      <data key="d8">1.0</data>
+      <data key="d9">M. V. Zimakova and R. Heckel co-authored papers on graph transformation</data>
+      <data key="d10">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d11">fdc954b454744820804d7798f3e0b5de</data>
+      <data key="d12">93</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="T. MURATA" target="E. PEDNAULT">
+      <data key="d8">1.0</data>
+      <data key="d9">T. Murata and E. Pednault co-authored papers on planning and reasoning</data>
+      <data key="d10">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d11">49c1383836934ec495c3b35769100a73</data>
+      <data key="d12">94</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="T. MURATA" target="E. SNIPPE">
+      <data key="d8">1.0</data>
+      <data key="d9">E. Snippe and T. Murata co-authored papers on planning problems</data>
+      <data key="d10">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d11">859dedcc3736439a8a563419f16cb3d8</data>
+      <data key="d12">95</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="E. PEDNAULT" target="FIRST INTERNATIONAL CONFERENCE ON PRINCIPLES OF KNOWLEDGE REPRESENTATION AND REASONING">
+      <data key="d8">1.0</data>
+      <data key="d9">E. Pednault presented at the first international conference</data>
+      <data key="d10">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d11">6078b9980a6c4dcd9198d151b833ead7</data>
+      <data key="d12">96</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="AUTOMATED SOFTWARE ENGINEERING (ASE)" target="IEEE">
+      <data key="d8">1.0</data>
+      <data key="d9">The ASE conference is organized under the auspices of IEEE</data>
+      <data key="d10">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d11">f93cd6b8213e46dda67af7e5382e1bd2</data>
+      <data key="d12">97</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="FIRST INTERNATIONAL CONFERENCE ON PRINCIPLES OF KNOWLEDGE REPRESENTATION AND REASONING" target="MORGAN KAUFMANN PUBLISHERS INC.">
+      <data key="d8">1.0</data>
+      <data key="d9">Morgan Kaufmann Publishers published the proceedings of the conference</data>
+      <data key="d10">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d11">496f17c2f74244c681db1b23c7a39c0c</data>
+      <data key="d12">98</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="GRAPH TRANSFORMATION" target="PETRI NETS">
+      <data key="d8">1.0</data>
+      <data key="d9">Petri nets can be analyzed using graph transformation techniques</data>
+      <data key="d10">d85c5813db53598bd4002ca34fbd7665</data>
+      <data key="d11">da1684437ab04f23adac28ff70bd8429</data>
+      <data key="d12">99</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="BANK" target="FERRY">
+      <data key="d8">1.0</data>
+      <data key="d9">The bank may be involved in financing or supporting the ferry operations, indicating a potential financial relationship</data>
+      <data key="d10">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d11">4517768fc4e24bd2a790be0e08a7856e</data>
+      <data key="d12">100</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="FERRY" target="LEFT">
+      <data key="d8">1.0</data>
+      <data key="d9">The ferry operates on the left side, indicating its location and role in the transportation process</data>
+      <data key="d10">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d11">545edff337344e518f68d1301d745455</data>
+      <data key="d12">101</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="FERRY" target="RIGHT">
+      <data key="d8">1.0</data>
+      <data key="d9">The ferry is intended to move from the left to the right location, indicating its operational route</data>
+      <data key="d10">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d11">9376ce8940e647a99e5e087514b88fa4</data>
+      <data key="d12">102</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="WOLF" target="GOAT">
+      <data key="d8">1.0</data>
+      <data key="d9">The wolf likes the goat, indicating a preference or relationship between these two entities</data>
+      <data key="d10">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d11">b38a636e86984600bb4b57c2e2df9747</data>
+      <data key="d12">103</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="GOAT" target="CABBAGE">
+      <data key="d8">1.0</data>
+      <data key="d9">The goat likes the cabbage, showing a relationship of preference</data>
+      <data key="d10">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d11">4bc7440b8f4b4e4cae65a5c49defa923</data>
+      <data key="d12">104</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="LOC1" target="LOC2">
+      <data key="d8">1.0</data>
+      <data key="d9">Loc1 and Loc2 are adjacent locations in the planning domain, indicating a spatial relationship</data>
+      <data key="d10">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d11">5d1b038ce8be4533b54dd79d6496de9b</data>
+      <data key="d12">105</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="LOC1" target="ROBR">
+      <data key="d8">1.0</data>
+      <data key="d9">Robr is located at Loc1, indicating its current position in the planning domain</data>
+      <data key="d10">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d11">ac6e5a44e0c04a4fa93589376fde4c34</data>
+      <data key="d12">106</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="LOC1" target="CONTA">
+      <data key="d8">1.0</data>
+      <data key="d9">Conta is initially located at Loc1, indicating its starting position in the planning domain</data>
+      <data key="d10">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d11">40e4ef7dbc98473ba311bd837859a62a</data>
+      <data key="d12">107</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="LOC2" target="ROBQ">
+      <data key="d8">1.0</data>
+      <data key="d9">Robq is located at Loc2, indicating its current position in the planning domain</data>
+      <data key="d10">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d11">222f0ea8a5684123a7045986640ec844</data>
+      <data key="d12">108</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="LOC2" target="CONTB">
+      <data key="d8">1.0</data>
+      <data key="d9">Contb is initially located at Loc2, indicating its starting position in the planning domain</data>
+      <data key="d10">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d11">668cf1fdfd644d39acc6350b86117ea2</data>
+      <data key="d12">109</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="ROBQ" target="CONTB">
+      <data key="d8">1.0</data>
+      <data key="d9">Robq is responsible for loading or unloading Contb, indicating a direct action relationship</data>
+      <data key="d10">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d11">478e4c72d8fb46dd8cc9f0691c9878fd</data>
+      <data key="d12">110</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="CONTA" target="ROBR">
+      <data key="d8">1.0</data>
+      <data key="d9">Robr is responsible for loading or unloading Conta, indicating a direct action relationship</data>
+      <data key="d10">a4f4c64385b90f82ce887a3edc4a4b62</data>
+      <data key="d11">82b0446e7c9d4fc793f7b97f890e9049</data>
+      <data key="d12">111</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="REACHABILITY TREE" target="REACHABILITY GRAPH">
+      <data key="d8">1.0</data>
+      <data key="d9">The Reachability Graph is an improved version of the Reachability Tree that addresses the issue of node duplication and complexity in planning problems.</data>
+      <data key="d10">face077b78475e973a88681b263d5aa8</data>
+      <data key="d11">8169efeea3ce473d9fd2f1c688126a1c</data>
+      <data key="d12">112</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="LOCATIONS" target="CONTAINERS">
+      <data key="d8">1.0</data>
+      <data key="d9">The locations are where the containers are situated, and the planning problem focuses on tracking these locations.</data>
+      <data key="d10">face077b78475e973a88681b263d5aa8</data>
+      <data key="d11">c2d48b75af6a4d7989ccf9eceabd934e</data>
+      <data key="d12">113</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="LOCATIONS" target="ROBOTS">
+      <data key="d8">1.0</data>
+      <data key="d9">Robots perform actions such as loading and unloading at specific locations</data>
+      <data key="d10">d1424b257022422187467b75dde41e8c</data>
+      <data key="d11">5f1fc373a8f34050a5f7dbd8ac852c1b</data>
+      <data key="d12">114</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="CHILD NODES" target="ROOT NODE">
+      <data key="d8">1.0</data>
+      <data key="d9">Child nodes are generated from the root node by applying applicable actions, representing the next possible states in the planning process.</data>
+      <data key="d10">face077b78475e973a88681b263d5aa8</data>
+      <data key="d11">0c010fa3aeac4b28b2fbb8c2339c2521</data>
+      <data key="d12">115</data>
+      <data key="d13">2</data>
+    </edge>
+    <edge source="PROPOSITIONS" target="SOLUTION PLAN">
+      <data key="d8">1.0</data>
+      <data key="d9">Propositions are used to define the goals and conditions that the Solution Plan aims to satisfy</data>
+      <data key="d10">d1424b257022422187467b75dde41e8c</data>
+      <data key="d11">c2999bdca08a478b84b10219875b285e</data>
+      <data key="d12">116</data>
+      <data key="d13">2</data>
+    </edge>
+  </graph>
+</graphml>
