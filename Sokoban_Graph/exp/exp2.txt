@@ -1,0 +1,34 @@
+prompt 加入 You only need to generate python programs, no explanation is required!
+
+--------------------------------------------------
+```python
+def get_plan(objects, init, goal):
+    plan = []
+    
+    # Initialize positions of sokoban and crates
+    sokoban = next(obj for obj in objects if 'sokoban' in obj)
+    crate1 = next(obj for obj in objects if 'crate1' in obj)
+    crate2 = next(obj for obj in objects if 'crate2' in obj)
+    
+    # Define the locations
+    locations = {loc: [] for loc in objects if loc.startswith('l')}
+    
+    # Fill the locations with the current positions of sokoban and crates
+    for atom in init:
+        if atom[0] == 'at':
+            locations[atom[2]].append(atom[1])
+    
+    # Move crate1 to its goal location (l9)
+    if ('at', crate1, 'l9') not in goal:
+        if ('at', crate1, 'l15') in init:
+            plan.append(f'(pushLeft {sokoban} l15 l10 l9 {crate1})')
+            plan.append(f'(moveLeft {sokoban} l10 l9)')
+    
+    # Move crate2 to its goal location (l2)
+    if ('at', crate2, 'l2') not in goal:
+        if ('at', crate2, 'l15') in init:
+            plan.append(f'(pushLeft {sokoban} l15 l10 l2 {crate2})')
+            plan.append(f'(moveLeft {sokoban} l10 l2)')
+    
+    return plan
+```
